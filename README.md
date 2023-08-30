@@ -1,15 +1,13 @@
 # Librerias a utilizar
 
-https://mui.com/material-ui - Components
-https://tailwindcss.com/docs/installation - Design
-https://floating-ui.com/docs - Tooltips (Opcional)
-https://atroposjs.com - Elementos 3D (Opcional)
-https://swiperjs.com - Slides
-https://apvarun.github.io/toastify-js - Snackbar | Notificatións
-https://fkhadra.github.io/react-toastify/introduction/ - Snackbar | Notificatións
-https://www.tailwindcss-animated.com - Animated
-
-
+- [materialUI](https://mui.com/material-ui)
+- [tailwindcss](https://tailwindcss.com/docs/installation)
+- [tailwindAnimated](https://www.tailwindcss-animated.com)
+- [Tooltips](https://floating-ui.com/docs)
+- [Elementos3D](https://atroposjs.com)
+- [Slides | Carruseles](https://swiperjs.com)
+- [Snackbar | Notificaciones](https://apvarun.github.io/toastify-js)
+- [Snackbar | Notificaciones](https://fkhadra.github.io/react-toastify/introduction/)
 
 # React + TypeScript + Vite
 
