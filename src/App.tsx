@@ -2,11 +2,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Layout } from "./components/Layout";
 import NotFound from "./components/NotFound/NotFound";
-import { About, Home, ProjectsForSale } from "./pages";
+import { Home, ProjectsForSale } from "./pages";
 
 function App() {
 
-  const user = "asd";
 
   return (
     <>
