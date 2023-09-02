@@ -109,6 +109,16 @@ const Home = () => (
         </div>
       </div>
     </div>
+    <div className="bg-cover bg-atras h-[500px] bg-center relative flex py-10">
+      <div className="bg-cover bg-Verde-0 w-96 h-44 static ">
+        <div className="font-Itim text-black my-8 mx-10 text-xl">
+          <p>
+            Cada Lote cuenta con un area con piscina y area verde para la
+            familia
+          </p>
+        </div>
+      </div>
+    </div>
     {/* Carrusel de casas */}
 
     <div>
@@ -126,94 +136,99 @@ const Home = () => (
               <span className="block">YA!</span>
             </h2>
           </div>
-          <div className="w-full">
-            <h3 className="text-3xl font-bold text-white">Regala un lote!!!</h3>
-            <p className="text-white text-xl">
-              ¿Deseas agendar una cita o solicitar más información? Déjanos tus
-              datos para que uno de nuestros asesores te contacte.
-            </p>
-            <form className="grid grid-cols-2 gap-4 mt-10">
-              <div>
-                <TextField
-                  label="Nombre completo"
-                  required
-                  variant="filled"
-                  className="w-full"
-                />
-              </div>
-
-              <div>
-                <TextField
-                  label="DNI"
-                  required
-                  variant="filled"
-                  className="w-full"
-                />
-              </div>
-
-              <div>
-                <TextField
-                  label="Correo"
-                  required
-                  variant="filled"
-                  className="w-full"
-                />
-              </div>
-
-              <div>
-                <TextField
-                  label="Telefono"
-                  required
-                  variant="filled"
-                  className="w-full"
-                />
-              </div>
-
-              <div className="col-span-2">
-                <TextField
-                  label="Déjanos tu opinión"
-                  required
-                  variant="filled"
-                  className="w-full"
-                  multiline
-                />
-              </div>
-
-              <div className="flex flex-col gap-4">
-                <FormGroup>
-                  <FormControlLabel
+          <div className="w-full ">
+            <div className="w-full ">
+              <h3 className="text-3xl font-bold text-white">
+                Regala un lote!!!
+              </h3>
+              <p className="text-white text-xl">
+                ¿Deseas agendar una cita o solicitar más información? Déjanos
+                tus datos para que uno de nuestros asesores te contacte.
+              </p>
+              <form className="grid grid-cols-2 gap-4 mt-10">
+                <div>
+                  <TextField
+                    label="Nombre completo"
                     required
-                    control={<Checkbox />}
-                    label="Terminos y Condiciones"
+                    variant="filled"
+                    className="w-full"
                   />
-                </FormGroup>
-                <FormControl>
-                  <FormLabel>Deseo recibir promociones</FormLabel>
-                  <RadioGroup
-                    row
-                    name="promociones"
+                </div>
+
+                <div>
+                  <TextField
+                    label="DNI"
+                    required
+                    variant="filled"
+                    className="w-full"
+                  />
+                </div>
+
+                <div>
+                  <TextField
+                    label="Correo"
+                    required
+                    variant="filled"
+                    className="w-full"
+                  />
+                </div>
+
+                <div>
+                  <TextField
+                    label="Telefono"
+                    required
+                    variant="filled"
+                    className="w-full"
+                  />
+                </div>
+
+                <div className="col-span-2">
+                  <TextField
+                    label="Déjanos tu opinión"
+                    required
+                    variant="filled"
+                    className="w-full"
+                    multiline
+                  />
+                </div>
+
+                <div className="flex flex-col gap-4">
+                  <FormGroup>
+                    <FormControlLabel
+                      required
+                      control={<Checkbox />}
+                      label="Terminos y Condiciones"
+                    />
+                  </FormGroup>
+                  <FormControl>
+                    <FormLabel>Deseo recibir promociones</FormLabel>
+                    <RadioGroup
+                      row
+                      name="promociones"
+                    >
+                      <FormControlLabel
+                        value="si"
+                        control={<Radio />}
+                        label="Si"
+                      />
+                      <FormControlLabel
+                        value="no"
+                        control={<Radio />}
+                        label="No"
+                      />
+                    </RadioGroup>
+                  </FormControl>
+                  <Button
+                    variant="contained"
+                    endIcon={<Send />}
                   >
-                    <FormControlLabel
-                      value="si"
-                      control={<Radio />}
-                      label="Si"
-                    />
-                    <FormControlLabel
-                      value="no"
-                      control={<Radio />}
-                      label="No"
-                    />
-                  </RadioGroup>
-                </FormControl>
-                <Button
-                  variant="contained"
-                  endIcon={<Send />}
-                >
-                  Enviar
-                </Button>
-              </div>
-              {/* <Checkbox aria-label="temrs and conditions" /> */}
-            </form>
+                    Enviar
+                  </Button>
+                </div>
+                {/* <Checkbox aria-label="temrs and conditions" /> */}
+              </form>
+              d
+            </div>
           </div>
         </div>
       </section>
