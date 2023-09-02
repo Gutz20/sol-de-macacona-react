@@ -7,9 +7,15 @@ export default {
       backgroundImage: {
         fondo1: "url('/imagen-index.jpg')",
         "form-pattern": "url('/img-bg-form.jpg')",
+        fam: "url('/img-bg-fam.png')",
+        fondo2: "url(/img-bg-)",
+      },
+      fontFamily: {
+        Itim: ["Itim", "cursive", "bold"],
+        Inter: ["Inter", "sans-serif"], 
       },
       //=======
-      
+
       //>>>>>>> main
     },
   },
