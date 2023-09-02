@@ -3,15 +3,14 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-<<<<<<< HEAD
-      backgroundImage:{
-        "fondo1":"url('/imagen-index.jpg')"
-      }
-=======
+      //<<<<<<< HEAD
       backgroundImage: {
+        fondo1: "url('/imagen-index.jpg')",
         "form-pattern": "url('/img-bg-form.jpg')",
       },
->>>>>>> main
+      //=======
+      
+      //>>>>>>> main
     },
   },
   plugins: [],
