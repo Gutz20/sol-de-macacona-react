@@ -33,7 +33,7 @@ const Navbar = () => {
 
       <header className="absolute w-full z-10">
         <div className="container mx-auto">
-          <nav className="flex justify-between space-x-4 py-8 px-10 gap-3">
+          <nav className="flex flex-wrap justify-between space-x-4 py-8 px-10 gap-3">
             <Link to="/">
               <img
                 src={Logo}
@@ -45,7 +45,7 @@ const Navbar = () => {
               {linksNavar.map(({ label, path }) => (
                 <Link
                   to={path}
-                  className="relative rounded-lg px-3.5 py-2 text-white font-bold hover:bg-slate-100 hover:text-slate-900"
+                  className="relative rounded-lg px-3.5 py-2 text-black font-bold hover:bg-slate-100 hover:text-slate-900"
                 >
                   {label}
                 </Link>
