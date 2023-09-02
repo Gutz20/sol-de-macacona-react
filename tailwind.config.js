@@ -9,6 +9,7 @@ export default {
         "form-pattern": "url('/img-bg-form.jpg')",
         fam: "url('/img-bg-fam.png')",
         fondo2: "url(/img-bg-terra.jpg)",
+        
       },
       fontFamily: {
         Itim: ["Itim", "cursive", "bold"],

@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Button,
   Checkbox,
+  Divider,
   FormControl,
   FormControlLabel,
   FormGroup,
@@ -19,53 +20,80 @@ import { Send } from "@mui/icons-material";
 
 const Home = () => (
   <>
-    <div className="bg-cover bg-fondo1 h-[800px] bg-center">
-      <div className=" h-50px w-auto place-items-center top-50% left-50% bg-white text-orange-950 py-20 px-20 grid opacity-60 left-80 top-80 text-5xl absolute font-Itim drop-shadow-2xl">
+    <div className="bg-cover bg-fondo1 h-[800px] bg-center relative flex items-center justify-center">
+      <div className="w-auto text-center bg-white text-orange-950 py-20 px-20 grid opacity-60 absolute text-5xl font-Itim drop-shadow-2xl">
         <h2>Descubre el Placer de vivir</h2>
         <h2> en el entorno perfecto</h2>
       </div>
     </div>
-    <div className="px-40 py-20 flex bg-amber-50">
-      <img
-        className="bg-cover bg-fam h-76 w-50 "
-        src="/public/fam.png"
-        alt="familia"
-      ></img>
-      <div className="inline-block ">
-        <h1 className=" inline-block font-Itim  text-4xl px-10  text-yellow-600 ">
-          Explora Innovadores Espacios<br></br>
-          Residenciales en Ica para Tu Nuevo <br></br>
-          Hogar Familiar
-        </h1>
-        <hr></hr>
-        <br></br>
-        <p className="px-10 font-Itim text-xl w-50 text-gray-500 flex h-44">
-          Explora los conjuntos residenciales<br></br>
-          más vanguardistas en Ica, brindando<br></br>
-          una variedad excepcional de casas y <br></br>
-          departamentos en venta para <br></br>
-          encontrar el lugar perfecto donde tu<br></br>
-          familia podrá establecer su nuevo<br></br>
-          hogar.
-        </p>
+    <div className="bg-amber-50 py-16">
+      <div className="container mx-auto flex justify-center gap-4">
+        <div className="mx-40 flex gap-4">
+          <img
+            className="bg-cover bg-fam h-76 w-50 "
+            src="/public/fam.png"
+            alt="familia"
+          ></img>
+          <div className="inline-block">
+            <h1 className=" inline-block font-Itim text-4xl text-yellow-600 mb-4">
+              Explora Innovadores Espacios<br></br>
+              Residenciales en Ica para Tu Nuevo <br></br>
+              Hogar Familiar
+            </h1>
+            <Divider
+              variant="inset"
+              component="div"
+            />
+            <p className="font-Itim text-xl w-50 text-gray-500">
+              Explora los conjuntos residenciales más vanguardistas en Ica,
+              brindando una variedad excepcional de casas y departamentos en
+              venta para encontrar el lugar perfecto donde tu familia podrá
+              establecer su nuevo hogar.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-    <div className=" bg-neutral-600 px-10 py-10  flex-col h-[32rem]">
-      <div className="">
-        <img
-          className="   h-60 w-120  "
-          src="/public/terra.jpg"
-          alt="terraza"
-        />
-      </div>
-      <div className="text-slate-50 inline-block">
-        <h3>+10 años</h3>
-        <h3>646546</h3>
+    <div className=" bg-neutral-700 py-20">
+      <div className="container mx-auto">
+        <div className="flex items-center justify-center flex-col gap-8">
+          <img
+            className="  left-28 h-60 w-120  "
+            src="/public/terra.jpg"
+            alt="terraza"
+          />
+          <div className="flex gap-8 justify-center">
+            <div className="text-slate-50 text-center">
+              <h3 className="text-3xl font-bold">+10 años</h3>
+              <p className="font-semibold text-xl">
+                de experiencia en el sector
+              </p>
+            </div>
+            <div className="w-[0.50px] bg-white"></div>
+            <div className="text-slate-50 text-center">
+              <h3 className="text-3xl font-bold">+100 departamentos</h3>
+              <p className="font-semibold text-xl">
+                de experiencia en el sector
+              </p>
+            </div>
+            <div className="w-[0.50px] bg-white"></div>
+            <div className="text-slate-50 text-center">
+              <h3 className="text-3xl font-bold">+20 aliados</h3>
+              <p className="font-semibold text-xl">trabajando con nosotros</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div>
-      {/* Carrusel de casas */}
-      {/* <Swiper
+    <div className="">
+      <div>
+        <div>
+
+        </div>
+      </div>
+    </div>
+    {/* Carrusel de casas */}
+    {/* <Swiper
       effect={"coverflow"}
       grabCursor={true}
       centeredSlides={true}
@@ -95,6 +123,7 @@ const Home = () => (
       </SwiperSlide>
     </Swiper> */}
 
+    <div>
       <section className="bg-form-pattern h-[750px] bg-cover bg-bottom bg-no-repeat relative">
         <img
           src="./img-person-form.png"
@@ -200,7 +229,6 @@ const Home = () => (
               </div>
               {/* <Checkbox aria-label="temrs and conditions" /> */}
             </form>
-            d
           </div>
         </div>
       </section>
