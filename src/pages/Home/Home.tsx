@@ -50,16 +50,17 @@ const Home = () => (
         </p>
       </div>
     </div>
-    <div className=" bg-neutral-600 px-5 py-20 relative">
-      <div>
-      <img
-        className="  left-28 h-60 w-120  "
-        src="/public/terra.jpg"
-        alt="terraza"
-      />
+    <div className=" bg-neutral-600 px-10 py-10  flex-col h-[32rem]">
+      <div className="">
+        <img
+          className="   h-60 w-120  "
+          src="/public/terra.jpg"
+          alt="terraza"
+        />
       </div>
-      <div className="text-slate-50">
+      <div className="text-slate-50 inline-block">
         <h3>+10 años</h3>
+        <h3>646546</h3>
       </div>
     </div>
     <div>
