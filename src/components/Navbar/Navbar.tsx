@@ -1,6 +1,6 @@
 import { linksNavar } from "@/helpers/data";
 import { Link } from "react-router-dom";
-import Logo from "../images/logo_SIN FONDO.png";
+// import Logo from "../images/logo_SIN FONDO.png";
 
 const Navbar = () => {
   return (
@@ -36,7 +36,7 @@ const Navbar = () => {
           <nav className="flex flex-wrap justify-between space-x-4 py-8 px-10 gap-3">
             <Link to="/">
               <img
-                src={Logo}
+                src={"/logo-sin-fondo.png"}
                 alt="Logo"
                 className="w-40 h-20"
               />
