@@ -19,6 +19,7 @@ import {
 import { Send } from "@mui/icons-material";
 
 const Home = () => (
+  
   <>
     <div className="bg-cover bg-fondo1 h-[800px] bg-center relative flex items-center justify-center">
       <div className="w-auto text-center bg-white text-orange-950 py-20 px-20 grid opacity-60 absolute text-5xl font-Itim drop-shadow-2xl">
