@@ -57,11 +57,35 @@ const Home = () => (
     <div className=" bg-neutral-700 py-20">
       <div className="container mx-auto">
         <div className="flex items-center justify-center flex-col gap-8">
-          <img
-            className="  left-28 h-60 w-120  "
-            src="/public/terra.jpg"
-            alt="terraza"
-          />
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={"auto"}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            pagination={true}
+            modules={[EffectCoverflow, Pagination]}
+            className="mySwiper w-full py-[50px]"
+          >
+            <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
+              <img src="./casa1.jpg" />
+            </SwiperSlide>
+            <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
+              <img src="./casa2.jpg" />
+            </SwiperSlide>
+            <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
+              <img src="./casa3.jpg" />
+            </SwiperSlide>
+            <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
+              <img src="./casa4.jpg" />
+            </SwiperSlide>
+          </Swiper>
           <div className="flex gap-8 justify-center">
             <div className="text-slate-50 text-center">
               <h3 className="text-3xl font-bold">+10 años</h3>
@@ -86,35 +110,6 @@ const Home = () => (
       </div>
     </div>
     {/* Carrusel de casas */}
-    {/* <Swiper
-      effect={"coverflow"}
-      grabCursor={true}
-      centeredSlides={true}
-      slidesPerView={"auto"}
-      coverflowEffect={{
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      }}
-      pagination={true}
-      modules={[EffectCoverflow, Pagination]}
-      className="mySwiper w-full py-[50px]"
-    >
-      <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
-        <img src="./casa1.jpg" />
-      </SwiperSlide>
-      <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
-        <img src="./casa2.jpg" />
-      </SwiperSlide>
-      <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
-        <img src="./casa3.jpg" />
-      </SwiperSlide>
-      <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
-        <img src="./casa4.jpg" />
-      </SwiperSlide>
-    </Swiper> */}
 
     <div>
       <section className="bg-form-pattern h-[750px] bg-cover bg-bottom bg-no-repeat relative">
@@ -130,9 +125,6 @@ const Home = () => (
               <span className="block">COMPRA TU LOTE</span>
               <span className="block">YA!</span>
             </h2>
-          </div>
-          <div className="h-50 w-full">
-            <img className="h-20 w-10"></img>
           </div>
           <div className="w-full">
             <h3 className="text-3xl font-bold text-white">Regala un lote!!!</h3>
