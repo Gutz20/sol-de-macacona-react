@@ -18,6 +18,8 @@ import {
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import React from "react";
+
 const Home = () => {
   return (
     <>
@@ -63,10 +65,6 @@ const Home = () => {
               grabCursor={true}
               centeredSlides={true}
               slidesPerView={"auto"}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
               coverflowEffect={{
                 rotate: 50,
                 stretch: 0,
@@ -114,8 +112,16 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* Carrusel de casas */}
-
+      <div className="bg-cover bg-atras h-[500px] bg-center relative flex py-10">
+        <div className="bg-cover bg-Verde-0 w-96 h-44 static ">
+          <div className="font-Itim text-black my-8 mx-10 text-xl">
+            <p>
+              Cada Lote cuenta con un area con piscina y area verde para la
+              familia
+            </p>
+          </div>
+        </div>
+      </div>
       <div>
         <section className="bg-form-pattern h-[750px] bg-cover bg-bottom bg-no-repeat relative">
           <img

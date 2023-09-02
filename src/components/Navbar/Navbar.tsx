@@ -30,10 +30,10 @@ const Navbar = () => {
           </nav>
         </div>
       </div> */}
-
-      <header className="absolute w-full z-10">
-        <div className="container mx-auto">
-          <nav className="flex flex-wrap justify-between space-x-4 py-8 px-10 gap-3">
+      <header className="absolute w-full z-10 ">
+        
+        <div className="container mx-auto ">
+          <nav className="flex flex-wrap justify-between space-x-4 py-8 px-10 gap-3 ">
             <Link to="/">
               <img
                 src={"/logo-sin-fondo.png"}
@@ -53,6 +53,7 @@ const Navbar = () => {
             </div>
           </nav>
         </div>
+        
       </header>
     </>
   );
