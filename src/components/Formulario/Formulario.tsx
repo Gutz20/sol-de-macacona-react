@@ -32,8 +32,8 @@ const Formulario = () => {
   return (
     <div>
       <section
-        className="bg-form-pattern h-[750px] bg-cover bg-bottom bg-no-repeat relative
-                          max-sm:h-[720px] max-sm:flex-col"
+        className="bg-form-pattern h-[750px] bg-cover bg-bottom bg-no-repeat relative p-4
+                          max-sm:h-[750px] max-sm:flex-col"
       >
         <img
           src="./img-person-form.png"
@@ -51,8 +51,8 @@ const Formulario = () => {
               <span className="block">YA!</span>
             </h2>
           </div>
-          <div className="w-full max-sm:w-[350px] max-sm:h-3/4 max-sm:bg-slate-400 max-sm:p-9 max-sm:bg-opacity-40 max-sm:rounded-3xl bg-white rounded-lg p-8 bg-opacity-40">
-            <h3 className="text-3xl font-bold text-white max-sm:text-xl max-sm:ml-4">
+          <div className="w-full max-sm:w-[350px] max-sm:p-10 max-sm:rounded-3xl bg-white rounded-lg p-8 bg-opacity-70">
+            <h3 className="text-3xl font-bold text-black max-sm:text-xl max-sm:ml-4">
               Regala un lote!!!
             </h3>
             <p className="text-gray-800 text-xl max-sm:text-xs max-sm:ml-4 font-semibold">
@@ -68,6 +68,7 @@ const Formulario = () => {
                   label="Nombre completo"
                   variant="filled"
                   size="small"
+                  className="w-full"
                   {...register("name")}
                   error={errors.name ? true : false}
                 />
@@ -83,7 +84,8 @@ const Formulario = () => {
                   variant="filled"
                   className="w-full"
                   size="small"
-                  {...register("dni", { valueAsNumber: true })}
+                  type="number"
+                  {...register("dni")}
                   error={errors.dni ? true : false}
                 />
                 {errors.dni && (
@@ -112,12 +114,10 @@ const Formulario = () => {
                   label="Telefono"
                   variant="filled"
                   className="w-full"
+                  type="number"
                   size="small"
                   error={errors.mail ? true : false}
-                  {...register("phone", {
-                    valueAsNumber: true,
-                    setValueAs: (v) => (v === "" ? undefined : parseInt(v, 10)),
-                  })}
+                  {...register("phone")}
                 />
                 {errors.phone && (
                   <p className="text-red-800 text-xs font-semibold">
@@ -132,6 +132,7 @@ const Formulario = () => {
                   variant="filled"
                   className="w-full"
                   size="small"
+                  rows={3}
                   multiline
                   error={errors.mail ? true : false}
                   {...register("message")}
