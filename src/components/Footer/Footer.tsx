@@ -35,19 +35,19 @@ const Footer = () => {
           <div className="col-span-1">
             <h2 className="text-xl text-white font-bold">Menu</h2>
             <ul>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer">
+              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
                 Inicio
               </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer">
+              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
                 Sobre Nosotros
               </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer">
+              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
                 Ubicación
               </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer">
+              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
                 Proyectos en Venta
               </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer">
+              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
                 Lotes
               </li>
             </ul>
@@ -55,13 +55,13 @@ const Footer = () => {
           <div className="col-span-1">
             <h2 className="text-xl text-white font-bold">Redes Sociales</h2>
             <ul>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer">
+              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
                 <FacebookIcon /> Facebook
               </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer">
+              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
                 <InstagramIcon /> Instagram
               </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer">
+              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
                 <WhatsAppIcon /> Whatsapp
               </li>
             </ul>
@@ -69,13 +69,13 @@ const Footer = () => {
           <div className="col-span-1">
             <h2 className="text-xl text-white font-bold">Otros</h2>
             <ul>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer">
+              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
                 <LocationOnIcon /> Panamericana Sur Km 295 Subtanjalla - Ica
               </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer">
+              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
                 <EmailIcon /> alguncorreo@gmail.com
               </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer">
+              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
                 <PhoneIcon /> +51 905 452 633
               </li>
             </ul>

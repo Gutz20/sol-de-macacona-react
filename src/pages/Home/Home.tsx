@@ -2,29 +2,18 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-import { Send } from "@mui/icons-material";
 import {
-  Button,
-  Checkbox,
-  Divider,
-  FormControl,
-  FormControlLabel,
-  FormGroup,
-  FormLabel,
-  Radio,
-  RadioGroup,
-  TextField,
+  Divider
 } from "@mui/material";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import React from "react";
 import { Formulario } from "@/components";
 
 const Home = () => {
   return (
     <>
-      <div className="bg-cover bg-fondo1 h-[800px] bg-center relative flex items-center justify-center">
+      <div className="bg-cover bg-fondo1 h-[800px] bg-center relative flex items-center justify-center opacity-80">
         <div className="w-auto text-center bg-white text-orange-950 py-20 px-20 grid opacity-60 absolute text-5xl font-Itim drop-shadow-2xl">
           <h2>Descubre el Placer de vivir</h2>
           <h2> en el entorno perfecto</h2>
