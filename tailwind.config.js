@@ -18,6 +18,9 @@ export default {
       colors: {
         Verde: ["#B5CD97"],
       },
+      screens:{
+          
+      },
       //=======
 
       //>>>>>>> main
