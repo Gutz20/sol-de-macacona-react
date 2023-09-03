@@ -2,10 +2,8 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-import {
-  Divider
-} from "@mui/material";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Divider } from "@mui/material";
+import { Autoplay, Pagination, Navigation, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Formulario } from "@/components";
@@ -52,30 +50,26 @@ const Home = () => {
           <div className="flex items-center justify-center flex-col gap-8">
             <Swiper
               effect={"coverflow"}
+              spaceBetween={50}
               grabCursor={true}
               centeredSlides={true}
               slidesPerView={"auto"}
-              coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
+              pagination={{
+                clickable: true,
               }}
-              pagination={true}
-              modules={[EffectCoverflow, Pagination]}
-              className="mySwiper w-full py-[50px]"
+              modules={[Autoplay, Pagination, Navigation, A11y]}
+              className="mySwiper"
             >
-              <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
+              <SwiperSlide>
                 <img src="./casa1.jpg" />
               </SwiperSlide>
-              <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
+              <SwiperSlide>
                 <img src="./casa2.jpg" />
               </SwiperSlide>
-              <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
+              <SwiperSlide>
                 <img src="./casa3.jpg" />
               </SwiperSlide>
-              <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
+              <SwiperSlide>
                 <img src="./casa4.jpg" />
               </SwiperSlide>
             </Swiper>

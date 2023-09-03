@@ -9,21 +9,21 @@ const Footer = () => {
   return (
     <footer className="bg-slate-800">
       <div className="container mx-auto py-4">
-        <div className="grid grid-cols-5 gap-8 pt-2">
-          <div className="col-span-2">
-            <div className="flex">
+        <div className="grid grid-cols-5 gap-8 pt-2 max-lg:gap-2">
+          <div className="col-span-2 max-sm:col-span-5 max-lg:col-span-5">
+            <div className="flex max-sm:flex-col max-sm:items-center max-lg:flex-col">
               <div>
                 <img
                   src="./logo-sin-fondo.png"
                   alt="Logo"
-                  className=""
+                  className="max-sm:h-[150px] max-sm:mx-auto"
                 />
-                <h2 className="uppercase text-sm text-center text-white font-bold">
+                <h2 className="uppercase text-sm text-center text-white font-bold max-lg:text-lg">
                   Contamos con financieamiento bancario
                 </h2>
               </div>
               <div className="flex items-center justify-center">
-                <p className="text-white text-sm font-semibold">
+                <p className="text-white text-sm font-semibold max-sm:text-xs max-lg:text-lg">
                   ¡Bienvenidos a Sol de Macacona! Tu socio confiable en la
                   búsqueda del hogar perfecto. Donde cada propiedad es una
                   oportunidad única y cada inversión es un paso hacia un futuro
@@ -32,57 +32,63 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-1">
-            <h2 className="text-xl text-white font-bold">Menu</h2>
-            <ul>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
-                Inicio
-              </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
-                Sobre Nosotros
-              </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
-                Ubicación
-              </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
-                Proyectos en Venta
-              </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
-                Lotes
-              </li>
-            </ul>
+          <div className="col-span-1 max-sm:col-span-5 max-lg:col-span-5">
+            <div className="flex flex-col items-center justify-center">
+              <h2 className="text-xl text-white font-bold">Menu</h2>
+              <ul>
+                <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
+                  Inicio
+                </li>
+                <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
+                  Sobre Nosotros
+                </li>
+                <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
+                  Ubicación
+                </li>
+                <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
+                  Proyectos en Venta
+                </li>
+                <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
+                  Lotes
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="col-span-1">
-            <h2 className="text-xl text-white font-bold">Redes Sociales</h2>
-            <ul>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
-                <FacebookIcon /> Facebook
-              </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
-                <InstagramIcon /> Instagram
-              </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
-                <WhatsAppIcon /> Whatsapp
-              </li>
-            </ul>
+          <div className="col-span-1 max-sm:col-span-5 max-lg:col-span-5">
+            <div className="flex flex-col items-center justify-center">
+              <h2 className="text-xl text-white font-bold">Redes Sociales</h2>
+              <ul>
+                <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
+                  <FacebookIcon /> Facebook
+                </li>
+                <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
+                  <InstagramIcon /> Instagram
+                </li>
+                <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
+                  <WhatsAppIcon /> Whatsapp
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="col-span-1">
-            <h2 className="text-xl text-white font-bold">Otros</h2>
-            <ul>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
-                <LocationOnIcon /> Panamericana Sur Km 295 Subtanjalla - Ica
-              </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
-                <EmailIcon /> alguncorreo@gmail.com
-              </li>
-              <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2">
-                <PhoneIcon /> +51 905 452 633
-              </li>
-            </ul>
+          <div className="col-span-1 max-sm:col-span-5 max-lg:col-span-5">
+            <div className="flex flex-col items-center justify-center">
+              <h2 className="text-xl text-white font-bold">Otros</h2>
+              <ul>
+                <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
+                  <LocationOnIcon /> Panamericana Sur Km 295 Subtanjalla - Ica
+                </li>
+                <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
+                  <EmailIcon /> alguncorreo@gmail.com
+                </li>
+                <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
+                  <PhoneIcon /> +51 905 452 633
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="w-full bg-gray-400 h-[0.5px] my-2"></div>
-        <div className="container mx-auto flex justify-between items-center text-white">
+        <div className="container mx-auto flex justify-between items-center text-white max-sm:flex-col">
           <h3>© 2023 NoMercy.Dev. Todos los derechos reservados.</h3>
           <p>Terminos y condiciones | Politicas de Privacidad</p>
         </div>
