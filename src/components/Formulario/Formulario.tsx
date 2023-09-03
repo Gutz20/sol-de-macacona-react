@@ -33,12 +33,12 @@ const Formulario = () => {
     <div>
       <section
         className="bg-form-pattern h-[750px] bg-cover bg-bottom bg-no-repeat relative
-                          max-sm:h-[550px] max-sm:flex-col"
+                          max-sm:h-[720px] max-sm:flex-col"
       >
         <img
           src="./img-person-form.png"
           alt="person"
-          className="absolute bottom-0 left-1/2 transform -translate-x-80 object-cover max-sm:left-0 max-sm:translate-x-0 max-sm:w-96"
+          className="absolute bottom-0 left-1/2 transform -translate-x-80 object-cover max-sm:left-0 max-sm:translate-x-0 max-sm:w-96 max-sm:hidden max-lg:hidden"
         />
         <div
           className="container mx-auto h-full flex items-center gap-4
@@ -51,7 +51,7 @@ const Formulario = () => {
               <span className="block">YA!</span>
             </h2>
           </div>
-          <div className="w-full max-sm:w-[350px] max-sm:h-[400px] max-sm:bg-slate-400 max-sm:p-9 max-sm:bg-opacity-40 max-sm:rounded-3xl bg-white rounded-lg p-8 bg-opacity-40">
+          <div className="w-full max-sm:w-[350px] max-sm:h-3/4 max-sm:bg-slate-400 max-sm:p-9 max-sm:bg-opacity-40 max-sm:rounded-3xl bg-white rounded-lg p-8 bg-opacity-40">
             <h3 className="text-3xl font-bold text-white max-sm:text-xl max-sm:ml-4">
               Regala un lote!!!
             </h3>
@@ -61,28 +61,28 @@ const Formulario = () => {
             </p>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="grid grid-cols-2 gap-4 mt-10 max-sm:gap-1 max-sm:text-xs max-sm:flex-col max-sm:grid-cols- max-sm:grid"
+              className="grid grid-cols-2 gap-4 mt-10 max-sm:mt-2 max-sm:gap-1 max-sm:text-xs max-sm:flex-col max-sm:grid-cols- max-sm:grid"
             >
-              <div>
+              <div className="col-span-1">
                 <TextField
                   label="Nombre completo"
                   variant="filled"
-                  className="w-full max-sm:h-1 max-sm:text-xs "
+                  size="small"
                   {...register("name")}
                   error={errors.name ? true : false}
                 />
                 {errors.name && (
-                  <span className="text-red-800 text-xs font-semibold">
+                  <p className="text-red-800 text-xs font-semibold">
                     {errors.name.message}
-                  </span>
+                  </p>
                 )}
               </div>
-
-              <div>
+              <div className="col-span-1">
                 <TextField
                   label="DNI"
                   variant="filled"
                   className="w-full"
+                  size="small"
                   {...register("dni", { valueAsNumber: true })}
                   error={errors.dni ? true : false}
                 />
@@ -92,11 +92,12 @@ const Formulario = () => {
                   </p>
                 )}
               </div>
-              <div>
+              <div className="col-span-1">
                 <TextField
                   label="Correo"
                   variant="filled"
                   className="w-full"
+                  size="small"
                   {...register("mail")}
                   error={errors.mail ? true : false}
                 />
@@ -106,11 +107,12 @@ const Formulario = () => {
                   </p>
                 )}
               </div>
-              <div>
+              <div className="col-span-1">
                 <TextField
                   label="Telefono"
                   variant="filled"
                   className="w-full"
+                  size="small"
                   error={errors.mail ? true : false}
                   {...register("phone", {
                     valueAsNumber: true,
@@ -129,6 +131,7 @@ const Formulario = () => {
                   label="Déjanos tu opinión"
                   variant="filled"
                   className="w-full"
+                  size="small"
                   multiline
                   error={errors.mail ? true : false}
                   {...register("message")}
@@ -140,48 +143,50 @@ const Formulario = () => {
                 )}
               </div>
 
-              <div className="flex flex-col gap-4">
-                <FormGroup>
-                  <FormControlLabel
-                    control={<Checkbox />}
-                    label="Terminos y Condiciones"
-                    {...register("terms")}
-                  />
-                  {/* {errors.terms && (
+              <div className="col-span-2">
+                <div className="flex flex-col gap-4">
+                  <FormGroup>
+                    <FormControlLabel
+                      control={<Checkbox />}
+                      label="Terminos y Condiciones"
+                      {...register("terms")}
+                    />
+                    {/* {errors.terms && (
                     <p className="text-red-800 text-sm font-semibold">
                       {errors.terms.message}
                     </p>
                   )} */}
-                </FormGroup>
-                <FormControl>
-                  <FormLabel>Deseo recibir promociones</FormLabel>
-                  <RadioGroup row>
-                    <FormControlLabel
-                      value="si"
-                      control={<Radio />}
-                      label="Si"
-                      {...register("promotions")}
-                    />
-                    <FormControlLabel
-                      value="no"
-                      control={<Radio />}
-                      label="No"
-                      {...register("promotions")}
-                    />
-                    {errors.promotions && (
-                      <p className="text-red-800 text-sm font-semibold">
-                        {errors.promotions.message}
-                      </p>
-                    )}
-                  </RadioGroup>
-                </FormControl>
-                <Button
-                  type="submit"
-                  variant="contained"
-                  endIcon={<Send />}
-                >
-                  Enviar
-                </Button>
+                  </FormGroup>
+                  <FormControl>
+                    <FormLabel>Deseo recibir promociones</FormLabel>
+                    <RadioGroup row>
+                      <FormControlLabel
+                        value="si"
+                        control={<Radio />}
+                        label="Si"
+                        {...register("promotions")}
+                      />
+                      <FormControlLabel
+                        value="no"
+                        control={<Radio />}
+                        label="No"
+                        {...register("promotions")}
+                      />
+                      {errors.promotions && (
+                        <p className="text-red-800 text-sm font-semibold">
+                          {errors.promotions.message}
+                        </p>
+                      )}
+                    </RadioGroup>
+                  </FormControl>
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    endIcon={<Send />}
+                  >
+                    Enviar
+                  </Button>
+                </div>
               </div>
               {/* <Checkbox aria-label="temrs and conditions" /> */}
             </form>

@@ -1,23 +1,23 @@
 export const linksNavar = [
   {
     label: "Inicio",
-    path: "/inicio",
+    path: "/",
   },
   {
-    label: "Sobre Nosotros",
-    path: "/Sobre Nosotros",
+    label: "Nosotros",
+    path: "/about",
     /* path: "/sol-de-macacona-react/src/pages/Projects-For-Sale/ProjectsForSale.tsx", */
   },
   {
     label: "Ubicacion",
-    path: "/Ubicacion",
+    path: "/ubication",
   },
   {
-    label: "Proyectos en Venta",
-    path: "/Proyectos en Venta",
+    label: "Proyectos",
+    path: "/proyects",
   },
   {
-    label: "Lotes!",
-    path: "/Lotes!",
+    label: "Lotes",
+    path: "/lotes",
   },
 ];
