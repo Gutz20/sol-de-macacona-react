@@ -1,7 +1,34 @@
+import { FormSchema, formValidationSchema } from "@/types";
+import { DevTool } from "@hookform/devtools";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Send } from "@mui/icons-material";
-import { Button, Checkbox, FormControl, FormControlLabel, FormGroup, FormLabel, Radio, RadioGroup, TextField } from "@mui/material";
+import {
+  Button,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  FormGroup,
+  FormLabel,
+  Radio,
+  RadioGroup,
+  TextField,
+} from "@mui/material";
+import { SubmitHandler, useForm } from "react-hook-form";
 
 const Formulario = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    control,
+  } = useForm<FormSchema>({
+    resolver: zodResolver(formValidationSchema),
+  });
+
+  const onSubmit: SubmitHandler<FormSchema> = (data) => {
+    console.log(data);
+  };
+
   return (
     <div>
       <section
@@ -24,88 +51,132 @@ const Formulario = () => {
               <span className="block">YA!</span>
             </h2>
           </div>
-          <div className="w-full max-sm:w-[350px] max-sm:h-[400px] max-sm:bg-slate-400 max-sm:p-9 max-sm:bg-opacity-40 max-sm:rounded-3xl">
+          <div className="w-full max-sm:w-[350px] max-sm:h-[400px] max-sm:bg-slate-400 max-sm:p-9 max-sm:bg-opacity-40 max-sm:rounded-3xl bg-white rounded-lg p-8 bg-opacity-40">
             <h3 className="text-3xl font-bold text-white max-sm:text-xl max-sm:ml-4">
               Regala un lote!!!
             </h3>
-            <p className="text-white text-xl max-sm:text-xs max-sm:ml-4">
+            <p className="text-gray-800 text-xl max-sm:text-xs max-sm:ml-4 font-semibold">
               ¿Deseas agendar una cita o solicitar más información? Déjanos tus
               datos para que uno de nuestros asesores te contacte.
             </p>
-            <form className="grid grid-cols-2 gap-4 mt-10 max-sm:gap-1 max-sm:text-xs max-sm:flex-col max-sm:grid-cols- max-sm:grid">
+            <form
+              onSubmit={handleSubmit(onSubmit)}
+              className="grid grid-cols-2 gap-4 mt-10 max-sm:gap-1 max-sm:text-xs max-sm:flex-col max-sm:grid-cols- max-sm:grid"
+            >
               <div>
                 <TextField
                   label="Nombre completo"
-                  required
                   variant="filled"
                   className="w-full max-sm:h-1 max-sm:text-xs "
+                  {...register("name")}
+                  error={errors.name ? true : false}
                 />
+                {errors.name && (
+                  <span className="text-red-800 text-xs font-semibold">
+                    {errors.name.message}
+                  </span>
+                )}
               </div>
 
               <div>
                 <TextField
                   label="DNI"
-                  required
                   variant="filled"
                   className="w-full"
+                  {...register("dni", { valueAsNumber: true })}
+                  error={errors.dni ? true : false}
                 />
+                {errors.dni && (
+                  <p className="text-red-800 text-xs font-semibold">
+                    {errors.dni.message}
+                  </p>
+                )}
               </div>
-
               <div>
                 <TextField
                   label="Correo"
-                  required
                   variant="filled"
                   className="w-full"
+                  {...register("mail")}
+                  error={errors.mail ? true : false}
                 />
+                {errors.mail && (
+                  <p className="text-red-800 text-xs font-semibold">
+                    {errors.mail.message}
+                  </p>
+                )}
               </div>
-
               <div>
                 <TextField
                   label="Telefono"
-                  required
                   variant="filled"
                   className="w-full"
+                  error={errors.mail ? true : false}
+                  {...register("phone", {
+                    valueAsNumber: true,
+                    setValueAs: (v) => (v === "" ? undefined : parseInt(v, 10)),
+                  })}
                 />
+                {errors.phone && (
+                  <p className="text-red-800 text-xs font-semibold">
+                    {errors.phone.message}
+                  </p>
+                )}
               </div>
 
               <div className="col-span-2">
                 <TextField
                   label="Déjanos tu opinión"
-                  required
                   variant="filled"
                   className="w-full"
                   multiline
+                  error={errors.mail ? true : false}
+                  {...register("message")}
                 />
+                {errors.message && (
+                  <p className="text-red-800 text-xs font-semibold">
+                    {errors.message.message}
+                  </p>
+                )}
               </div>
 
               <div className="flex flex-col gap-4">
                 <FormGroup>
                   <FormControlLabel
-                    required
                     control={<Checkbox />}
                     label="Terminos y Condiciones"
+                    {...register("terms")}
                   />
+                  {/* {errors.terms && (
+                    <p className="text-red-800 text-sm font-semibold">
+                      {errors.terms.message}
+                    </p>
+                  )} */}
                 </FormGroup>
                 <FormControl>
                   <FormLabel>Deseo recibir promociones</FormLabel>
-                  <RadioGroup
-                    row
-                    name="promociones"
-                  >
+                  <RadioGroup row>
                     <FormControlLabel
                       value="si"
                       control={<Radio />}
                       label="Si"
+                      {...register("promotions")}
                     />
                     <FormControlLabel
                       value="no"
                       control={<Radio />}
                       label="No"
+                      {...register("promotions")}
                     />
+                    {errors.promotions && (
+                      <p className="text-red-800 text-sm font-semibold">
+                        {errors.promotions.message}
+                      </p>
+                    )}
                   </RadioGroup>
                 </FormControl>
                 <Button
+                  type="submit"
                   variant="contained"
                   endIcon={<Send />}
                 >
@@ -117,6 +188,8 @@ const Formulario = () => {
           </div>
         </div>
       </section>
+
+      <DevTool control={control} />
     </div>
   );
 };

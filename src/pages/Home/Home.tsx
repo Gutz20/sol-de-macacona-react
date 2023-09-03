@@ -2,10 +2,9 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-import { Send } from "@mui/icons-material";
-import {Divider,} from "@mui/material";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { A11y, Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import { Formulario } from "@/components";
 
 const Home = () => {
@@ -65,30 +64,26 @@ const Home = () => {
           <div className="flex items-center justify-center flex-col gap-8">
             <Swiper
               effect={"coverflow"}
+              spaceBetween={50}
               grabCursor={true}
               centeredSlides={true}
               slidesPerView={"auto"}
-              coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
+              pagination={{
+                clickable: true,
               }}
-              pagination={true}
-              modules={[EffectCoverflow, Pagination]}
-              className="mySwiper w-full py-[50px]"
+              modules={[Autoplay, Pagination, Navigation, A11y]}
+              className="mySwiper"
             >
-              <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
+              <SwiperSlide>
                 <img src="./casa1.jpg" />
               </SwiperSlide>
-              <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
+              <SwiperSlide>
                 <img src="./casa2.jpg" />
               </SwiperSlide>
-              <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
+              <SwiperSlide>
                 <img src="./casa3.jpg" />
               </SwiperSlide>
-              <SwiperSlide className="w-[300px] h-[300px] bg-cover bg-center">
+              <SwiperSlide>
                 <img src="./casa4.jpg" />
               </SwiperSlide>
             </Swiper>
@@ -126,8 +121,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="bg-cover bg-atras h-[500px] bg-center relative flex py-10
-                      max-sm:h-[350px]">
+      <div
+        className="bg-cover bg-atras h-[500px] bg-center relative flex py-10
+                      max-sm:h-[350px]"
+      >
         <div className="bg-cover bg-Verde-0 w-96 h-44 static max-sm:bg-cover max-sm:w-40 max-sm:h-[5rem] ">
           <div className="font-Itim text-black my-8 mx-10 text-xl max-sm:my-3 max-sm:mx-2 max-sm:text-xs">
             <p>
