@@ -23,7 +23,14 @@ const HomeCarrusel = () => {
             className="mySwiper"
           >
             <SwiperSlide>
-              <img src="./casa1.jpg" />
+              <video
+                autoPlay
+                muted
+                loop
+                className="flex gap-8 justify-center mx-40 max-sm:gap-2"
+              >
+                <source src="/public/VideoPromo.mp4" type="video/mp4" />
+              </video>
             </SwiperSlide>
             <SwiperSlide>
               <img src="./casa2.jpg" />

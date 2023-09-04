@@ -12,7 +12,7 @@ const Navbar = () => {
               <img
                 src={"/logo-sin-fondo.png"}
                 alt="Logo"
-                className="w-80 h-40 max-sm:w-16 max-sm:h-10"
+                className="w-70 h-40 max-sm:w-16 max-sm:h-10"
               />
             </Link>
             <div className="flex items-center justify-center">

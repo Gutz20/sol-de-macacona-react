@@ -2,11 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Layout } from "./components/Layout";
 import NotFound from "./components/NotFound/NotFound";
-import { Home, ProjectsForSale } from "./pages";
+import { Home, ProjectsForSale, Ubication } from "./pages";
 
 function App() {
-
-
   return (
     <>
       <BrowserRouter>
@@ -24,7 +22,14 @@ function App() {
               path="/about"
               element={<ProjectsForSale />}
             />
-            
+            <Route
+              path="/ubication"
+              element={<Ubication />}
+            />
+            <Route
+              path="/lotes"
+              element={<Ubication />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>

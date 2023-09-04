@@ -7,7 +7,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-800">
+    <footer className="bg-slate-800 relative">
       <div className="container mx-auto py-4">
         <div className="grid grid-cols-5 gap-8 pt-2 max-lg:gap-2">
           <div className="col-span-2 max-sm:col-span-5 max-lg:col-span-5">
@@ -68,7 +68,7 @@ const Footer = () => {
                   <InstagramIcon /> Instagram
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
-                  <WhatsAppIcon /> Whatsapp
+                  <WhatsAppIcon/> Whatsapp
                 </li>
               </ul>
             </div>
