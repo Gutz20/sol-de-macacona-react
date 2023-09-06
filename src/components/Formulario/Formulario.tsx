@@ -45,9 +45,9 @@ const Formulario = () => {
                         max-sm:flex-col"
         >
           <div className="w-full">
-            <h2 className="text-4xl font-bold text-white text-center max-sm:text-xl">
+            <h2 className="text-3xl font-bold text-white text-center max-sm:text-xl">
               ¿QUÉ ESPERAS?
-              <span className="block">COMPRA TU LOTE</span>
+              <span className="block">SEPARA TU LOTE</span>
               <span className="block">YA!</span>
             </h2>
           </div>
@@ -84,7 +84,7 @@ const Formulario = () => {
                   variant="filled"
                   className="w-full"
                   size="small"
-                  type="number"
+                  type="tel"
                   {...register("dni")}
                   error={errors.dni ? true : false}
                 />
