@@ -7,8 +7,7 @@ export default {
       backgroundImage: {
         fondo1: "url('/imagen-index.jpg')",
         "form-pattern": "url('/img-bg-form.jpg')",
-        fam: "url('/fam.png')",
-        fondo2: "url(/img-bg-terra.jpg)",
+        fondoAboutCenter: "url('/modelos-general.jpg')",
         atras: "url('/atras.jpg')",
       },
       fontFamily: {
@@ -18,9 +17,7 @@ export default {
       colors: {
         Verde: ["#B5CD97"],
       },
-      screens:{
-          
-      },
+      screens: {},
       //=======
 
       //>>>>>>> main

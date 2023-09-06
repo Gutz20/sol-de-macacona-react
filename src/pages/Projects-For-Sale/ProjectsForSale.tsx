@@ -8,7 +8,7 @@ const ProjectsForSale = () => {
         <img src={Logo} alt="Logo" />
       </div> */}
 
-      <div className="flex justify-end">
+      {/* <div className="flex justify-end">
         <nav className="flex sm:justify-center space-x-4 py-8 px-10 gap-3">
           {linksNavar.map(({ label, path }) => (
             <Link
@@ -19,7 +19,7 @@ const ProjectsForSale = () => {
             </Link>
           ))}
         </nav>
-      </div>
+      </div> */}
     </>
   );
 };

@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Layout } from "./components/Layout";
 import NotFound from "./components/NotFound/NotFound";
-import { Home, ProjectsForSale, Ubication } from "./pages";
+import { About, Home, ProjectsForSale, Ubication } from "./pages";
 
 function App() {
   return (
@@ -20,11 +20,15 @@ function App() {
             />
             <Route
               path="/about"
-              element={<ProjectsForSale />}
+              element={<About />}
             />
             <Route
               path="/ubication"
               element={<Ubication />}
+            />
+            <Route
+              path="/proyects"
+              element={<ProjectsForSale />}
             />
             <Route
               path="/lotes"

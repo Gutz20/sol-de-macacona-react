@@ -26,14 +26,14 @@ const Home = () => {
           max-sm:flex-col max-sm:gap-4 max-sm:mx-10 max-sm:items-center max-lg:flex-col"
           >
             <img
-              className="bg-cover h-76 w-50 max-sm:h-[220px] max-sm:w-76"
+              className="bg-cover h-76 w-50 max-sm:h-[220px] max-sm:w-76 max-lg:h-80"
               src="./family-home-section.svg"
               alt="familia"
             ></img>
             <div className="inline-block">
               <h1
-                className=" inline-block font-Itim text-4xl text-yellow-600 mb-4
-                  max-sm:text-xl max-sm:mb-2 max-sm:inline-block"
+                className=" inline-block font-Itim text-4xl w-full text-yellow-600 mb-4
+                  max-sm:text-xl max-sm:mb-2 max-sm:inline-block max-lg:text-3xl"
               >
                 Explora Innovadores Espacios<br></br>
                 Residenciales en Ica para Tu Nuevo <br></br>

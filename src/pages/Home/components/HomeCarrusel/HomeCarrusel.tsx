@@ -27,19 +27,31 @@ const HomeCarrusel = () => {
                 autoPlay
                 muted
                 loop
-                className="flex gap-8 justify-center mx-40 max-sm:gap-2"
+                className="mx-auto w-[76%]"
               >
-                <source src="/public/VideoPromo.mp4" type="video/mp4" />
+                <source
+                  src="/public/VideoPromo.mp4"
+                  type="video/mp4"
+                />
               </video>
             </SwiperSlide>
             <SwiperSlide>
-              <img src="./casa2.jpg" />
+              <img
+                src="./casa2.jpg"
+                className="w-full h-full mx-auto"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="./casa3.jpg" />
+              <img
+                src="./casa3.jpg"
+                className="w-full h-full mx-auto"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src="./casa1.jpg" />
+              <img
+                src="./casa2.jpg"
+                className="w-full h-full mx-auto"
+              />
             </SwiperSlide>
           </Swiper>
           <div className="flex gap-8 justify-center mx-5 max-sm:gap-2 ">
