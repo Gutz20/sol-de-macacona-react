@@ -1,6 +1,11 @@
-import { Formulario } from "@/components";
+import React from "react";
+
 const Lotes = () => {
-  return <div>NotFound</div>;
+  return (
+    <>
+      <p>sads</p>
+    </>
+  );
 };
 
 export default Lotes;

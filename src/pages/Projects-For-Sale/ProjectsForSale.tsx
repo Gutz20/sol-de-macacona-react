@@ -1,25 +1,26 @@
-import { linksNavar } from "@/helpers/data";
-import { Link } from "react-router-dom";
+import Formulario from "@/components/Formulario/Formulario";
+import ProyectCarrusel from "./ProyectCarrusel/ProyectCarrusel";
+import Vista_A from "./ModeloA/Vista A/Vista_A";
+
 
 const ProjectsForSale = () => {
   return (
     <>
-      {/* <div className="flex justify-between h-[160px] py-4 px-10 absolute">
-        <img src={Logo} alt="Logo" />
-      </div> */}
-
-      <div className="flex justify-end">
-        <nav className="flex sm:justify-center space-x-4 py-8 px-10 gap-3">
-          {linksNavar.map(({ label, path }) => (
-            <Link
-              to={path}
-              className="relative rounded-lg px-3.5 py-2 text-slate-700 font-bold hover:bg-slate-100 hover:text-slate-900"
-            >
-              {label}
-            </Link>
-          ))}
-        </nav>
+      <div
+        className=" bg-cover bg-fondo1 w-full h-[800px] bg-center relative flex items-center justify-center 
+      max-sm:w-full max-sm:bg-cover max-sm:bg-fondo1 max-sm:h-[250px] max-sm:bg-center max-sm:relative max-sm:flex max-sm:items-center max-sm:justify-center"
+      >
+        <div
+          className="w-auto text-center text-red-900 py-20 px-20 grid  absolute text-8xl font-bold drop-shadow-2xl
+        max-sm:absolute max-sm:py-5 max-sm:px-5  max-sm:font-Itim max-sm:text-xl"
+        >
+          <h2>PROYECTOS EN</h2>
+          <h2>VENTA</h2>
+        </div>
       </div>
+      <Vista_A />
+      <ProyectCarrusel />
+      <Formulario />
     </>
   );
 };
