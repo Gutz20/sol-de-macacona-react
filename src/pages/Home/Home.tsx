@@ -1,5 +1,6 @@
-import { Formulario } from "@/components";
-import { HomeCarrusel } from ".";
+import { Carrusel, Formulario } from "@/components";
+import { slidesHome } from "@/helpers";
+
 
 const Home = () => {
   return (
@@ -26,14 +27,14 @@ const Home = () => {
           max-sm:flex-col max-sm:gap-4 max-sm:mx-10 max-sm:items-center max-lg:flex-col"
           >
             <img
-              className="bg-cover h-76 w-50 max-sm:h-[220px] max-sm:w-76"
+              className="bg-cover h-76 w-50 max-sm:h-[220px] max-sm:w-76 max-lg:h-80"
               src="./family-home-section.svg"
               alt="familia"
             ></img>
             <div className="inline-block">
               <h1
-                className=" inline-block font-Itim text-4xl text-yellow-600 mb-4
-                  max-sm:text-xl max-sm:mb-2 max-sm:inline-block"
+                className=" inline-block font-Itim text-4xl w-full text-yellow-600 mb-4
+                  max-sm:text-xl max-sm:mb-2 max-sm:inline-block max-lg:text-3xl"
               >
                 Explora Innovadores Espacios<br></br>
                 Residenciales en Ica para Tu Nuevo <br></br>
@@ -53,9 +54,46 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <HomeCarrusel />
+      <section className=" bg-neutral-700 py-20">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-center flex-col gap-8">
+            <Carrusel slides={slidesHome} />
+            <div className="flex gap-8 justify-center mx-5 max-sm:gap-2 ">
+              <div className="text-slate-50 text-center">
+                <div className="max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-5 max-sm:mt-4"></div>
+                <h3 className="text-3xl font-bold max-sm:text-xs max-sm:font-bold">
+                  +10 años
+                </h3>
+                <p className="font-semibold text-xl max-sm:text-xs">
+                  de experiencia en el sector
+                </p>
+              </div>
+              <div className="w-[0.50px] bg-white"></div>
+              <div className="text-slate-50 text-center">
+                <div className="max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-5 max-sm:mt-4"></div>
+                <h3 className="text-3xl font-bold max-sm:text-xs max-sm:font-bold">
+                  +100 departamentos
+                </h3>
+                <p className="font-semibold text-xl max-sm:text-xs">
+                  de experiencia en el sector
+                </p>
+              </div>
+              <div className="w-[0.50px] bg-white"></div>
+              <div className="text-slate-50 text-center">
+                <div className="max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-5 max-sm:mt-4"></div>
+                <h3 className="text-3xl font-bold max-sm:text-xs max-sm:font-bold">
+                  +20 aliados
+                </h3>
+                <p className="font-semibold text-xl max-sm:text-xs">
+                  trabajando con nosotros
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div
-        className="bg-cover bg-atras h-[500px] bg-center relative flex py-10
+        className="bg-cover bg-atras h-[800px] bg-center relative flex py-10
                       max-sm:h-[350px]"
       >
         <div className="bg-cover bg-Verde-0 w-96 h-44 static max-sm:bg-cover max-sm:w-40 max-sm:h-[5rem] ">

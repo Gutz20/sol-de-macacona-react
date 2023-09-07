@@ -10,12 +10,31 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />} errorElement={<NotFound />}>
-            <Route index={true} element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/proyects" element={<ProjectsForSale />} />
-            <Route path="/ubication" element={<Ubication />} />
-            <Route path="/lotes" element={<Lotes />} />
+          <Route
+            path="/"
+            element={<Layout />}
+            errorElement={<NotFound />}
+          >
+            <Route
+              index={true}
+              element={<Home />}
+            />
+            <Route
+              path="/about"
+              element={<About />}
+            />
+            <Route
+              path="/proyects"
+              element={<ProjectsForSale />}
+            />
+            <Route
+              path="/ubication"
+              element={<Ubication />}
+            />
+            <Route
+              path="/lotes"
+              element={<Lotes />}
+            />
           </Route>
         </Routes>
       </BrowserRouter>

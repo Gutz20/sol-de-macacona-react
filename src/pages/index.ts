@@ -1,5 +1,7 @@
 export * from './About';
-export * from './Home/components/HomeCarrusel';
 export * from './Home';
+export * from './Lotes';
+export * from './Projects-For-Sale/components/ModelsLotes';
+export * from './Projects-For-Sale/components';
 export * from './Projects-For-Sale';
-export { default as Ubication } from './Ubication/Ubication';
+export * from './Ubication';

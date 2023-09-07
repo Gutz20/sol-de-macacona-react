@@ -1,5 +1,5 @@
 import { linksNavar } from "@/helpers/data";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 // import Logo from "../images/logo_SIN FONDO.png";
 
 const Navbar = () => {
@@ -17,13 +17,22 @@ const Navbar = () => {
             </Link>
             <div className="flex items-center justify-center">
               {linksNavar.map(({ label, path }, index) => (
-                <Link
+                <NavLink
                   key={index}
                   to={path}
-                  className="relative rounded-lg px-3.5 py-2 text-black font-bold hover:bg-slate-100 hover:text-slate-900 max-sm:py-0.5 max-sm:px-1.5 max-sm:text-xs"
+                  className={({ isActive, isPending }) =>
+                    `${
+                      isActive
+                        ? "font-bold"
+                        : isPending
+                        ? "underline"
+                        : "text-slate-700"
+                    } relative rounded-lg px-3.5 py-2 text-black font-bold hover:bg-slate-100 hover:text-slate-900 max-sm:py-0.5 max-sm:px-1.5 max-sm:text-xs
+                  `
+                  }
                 >
                   {label}
-                </Link>
+                </NavLink>
               ))}
             </div>
           </nav>
