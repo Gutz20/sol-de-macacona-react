@@ -2,15 +2,20 @@ import { Models, Views, updateImage } from "@/types/Lost";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import {
   Button,
+  ButtonGroup,
   Card,
   CardContent,
+  Divider,
   List,
   ListItem,
   ListItemAvatar,
+  ListItemButton,
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
 import { useState } from "react";
+import InboxIcon from "@mui/icons-material/Inbox";
+import PageviewIcon from "@mui/icons-material/Pageview";
 
 const ModelsLotes = () => {
   const [estado, setEstado] = useState<{
@@ -30,29 +35,24 @@ const ModelsLotes = () => {
   const onViewChange = (view: Views) => {
     setEstado({ ...estado, view, image: updateImage[view][estado.model] });
   };
-  
+
   return (
     <>
       <div className="container mx-auto">
-        <h2 className="text-center text-2xl text-green-900 font-bold font-Itim mb-2">
+        <h2 className="text-center text-4xl my-4 pb-4 text-green-900 font-bold font-Itim mb-2">
           Lotes disponibles con acabados de lujo
         </h2>
         <div className="flex justify-center items-center gap-8">
-          <Button
-            onClick={() => onModelChange("A")}
+          <ButtonGroup
             variant="contained"
+            aria-label="outlined button group"
           >
-            Modelo A
-          </Button>
-          <Button
-            onClick={() => onModelChange("B")}
-            variant="contained"
-          >
-            Modelo B
-          </Button>
+            <Button onClick={() => onModelChange("A")}>Modelo A</Button>
+            <Button onClick={() => onModelChange("B")}>Modelo B</Button>
+          </ButtonGroup>
         </div>
 
-        <div className="grid grid-cols-4 my-4">
+        <div className="grid grid-cols-4 my-4 gap-4">
           {/* Caracteristicas */}
           <div className="col-span-1">
             <h3 className="font-bold text-xl uppercase text-center">
@@ -70,7 +70,7 @@ const ModelsLotes = () => {
                         <CheckCircleIcon className="text-green-700" />
                       </ListItemIcon>
                     </ListItemAvatar>
-                    <ListItemText primary="Dormitorio" />
+                    <ListItemText primary="Áreas verdes" />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
@@ -78,7 +78,7 @@ const ModelsLotes = () => {
                         <CheckCircleIcon className="text-green-700" />
                       </ListItemIcon>
                     </ListItemAvatar>
-                    <ListItemText primary="1 Baño" />
+                    <ListItemText primary="Lavandería" />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
@@ -86,7 +86,7 @@ const ModelsLotes = () => {
                         <CheckCircleIcon className="text-green-700" />
                       </ListItemIcon>
                     </ListItemAvatar>
-                    <ListItemText primary="Walk-in Closet" />
+                    <ListItemText primary="Comedor" />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
@@ -94,7 +94,7 @@ const ModelsLotes = () => {
                         <CheckCircleIcon className="text-green-700" />
                       </ListItemIcon>
                     </ListItemAvatar>
-                    <ListItemText primary="Cocina Abierta" />
+                    <ListItemText primary="6 dormitorios" />
                   </ListItem>
                   <ListItem>
                     <ListItemAvatar>
@@ -102,7 +102,31 @@ const ModelsLotes = () => {
                         <CheckCircleIcon className="text-green-700" />
                       </ListItemIcon>
                     </ListItemAvatar>
-                    <ListItemText primary="Centro de Lavado" />
+                    <ListItemText primary="Terraza" />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <ListItemIcon>
+                        <CheckCircleIcon className="text-green-700" />
+                      </ListItemIcon>
+                    </ListItemAvatar>
+                    <ListItemText primary="Sala" />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <ListItemIcon>
+                        <CheckCircleIcon className="text-green-700" />
+                      </ListItemIcon>
+                    </ListItemAvatar>
+                    <ListItemText primary="Cocina" />
+                  </ListItem>
+                  <ListItem>
+                    <ListItemAvatar>
+                      <ListItemIcon>
+                        <CheckCircleIcon className="text-green-700" />
+                      </ListItemIcon>
+                    </ListItemAvatar>
+                    <ListItemText primary="Estudio" />
                   </ListItem>
                 </List>
               </CardContent>
@@ -110,41 +134,46 @@ const ModelsLotes = () => {
           </div>
           {/* Image */}
           <div className="col-span-2">
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center h-full">
               <img
                 src={estado.image}
                 alt="Casa"
-                className="w-[550px] h-[350px]"
+                className="w-full rounded-lg"
               />
             </div>
           </div>
           {/* Actions */}
           <div className="col-span-1">
-            <div className="flex flex-col gap-8 items-center justify-center h-full">
-              <Button
-                variant="contained"
-                className="w-32"
-                color="inherit"
-                onClick={() => onViewChange("A")}
-              >
-                Vista A
-              </Button>
-              <Button
-                variant="contained"
-                className="w-32"
-                color="inherit"
-                onClick={() => onViewChange("B")}
-              >
-                Vista B
-              </Button>
-              <Button
-                variant="contained"
-                className="w-32"
-                color="inherit"
-                onClick={() => onViewChange("C")}
-              >
-                Vista C
-              </Button>
+            <div className="drop-shadow-2xl bg-white rounded-lg">
+              <h2 className="text-xl font-bold text-center py-4">
+                Vistas disponibles
+              </h2>
+              <List sx={{ p: 0 }}>
+                <ListItem disablePadding>
+                  <ListItemButton onClick={() => onViewChange("A")}>
+                    <ListItemIcon>
+                      <PageviewIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Vista A" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton onClick={() => onViewChange("B")}>
+                    <ListItemIcon>
+                      <PageviewIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Vista B" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton onClick={() => onViewChange("C")}>
+                    <ListItemIcon>
+                      <PageviewIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Vista C" />
+                  </ListItemButton>
+                </ListItem>
+              </List>
             </div>
           </div>
         </div>
