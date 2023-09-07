@@ -1,4 +1,6 @@
 import { Carrusel, Formulario } from "@/components";
+import { slidesHome } from "@/helpers";
+
 
 const Home = () => {
   return (
@@ -55,7 +57,7 @@ const Home = () => {
       <section className=" bg-neutral-700 py-20">
         <div className="container mx-auto">
           <div className="flex items-center justify-center flex-col gap-8">
-            <Carrusel />
+            <Carrusel slides={slidesHome} />
             <div className="flex gap-8 justify-center mx-5 max-sm:gap-2 ">
               <div className="text-slate-50 text-center">
                 <div className="max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-5 max-sm:mt-4"></div>
