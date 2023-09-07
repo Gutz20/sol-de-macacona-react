@@ -46,39 +46,27 @@ const About = () => {
       <div className="my-4 flex flex-col gap-4">
         <h3 className="text-center font-bold text-3xl">Valores</h3>
         <div className="flex items-center justify-center gap-8">
-          <Card
-            variant="outlined"
-            className="w-fit"
-          >
-            <CardMedia
-              component="img"
-              height="194"
-              image="./img-valor-1.png"
+          <div className="hover:cursor-pointer">
+            <img
+              src="./img-valor-1.png"
               alt="BG"
+              className="rounded-md"
             />
-          </Card>
-          <Card
-            variant="outlined"
-            className="w-fit"
-          >
-            <CardMedia
-              component="img"
-              height="194"
-              image="./img-valor-1.png"
+          </div>
+          <div className="hover:cursor-pointer">
+            <img
+              src="./img-valor-1.png"
               alt="BG"
+              className="rounded-md"
             />
-          </Card>
-          <Card
-            variant="outlined"
-            className="w-fit"
-          >
-            <CardMedia
-              component="img"
-              height="194"
-              image="./img-valor-1.png"
+          </div>
+          <div className="hover:cursor-pointer">
+            <img
+              src="./img-valor-1.png"
               alt="BG"
+              className="rounded-md"
             />
-          </Card>
+          </div>
         </div>
         <div className="flex flex-col items-center justify-center gap-4 my-4">
           <h3 className="font-bold text-3xl ">Nuestro Equipo</h3>
