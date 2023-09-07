@@ -1,5 +1,4 @@
-import { Formulario } from "@/components";
-import { HomeCarrusel } from ".";
+import { Carrusel, Formulario } from "@/components";
 
 const Home = () => {
   return (
@@ -53,9 +52,46 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <HomeCarrusel />
+      <section className=" bg-neutral-700 py-20">
+        <div className="container mx-auto">
+          <div className="flex items-center justify-center flex-col gap-8">
+            <Carrusel />
+            <div className="flex gap-8 justify-center mx-5 max-sm:gap-2 ">
+              <div className="text-slate-50 text-center">
+                <div className="max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-5 max-sm:mt-4"></div>
+                <h3 className="text-3xl font-bold max-sm:text-xs max-sm:font-bold">
+                  +10 años
+                </h3>
+                <p className="font-semibold text-xl max-sm:text-xs">
+                  de experiencia en el sector
+                </p>
+              </div>
+              <div className="w-[0.50px] bg-white"></div>
+              <div className="text-slate-50 text-center">
+                <div className="max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-5 max-sm:mt-4"></div>
+                <h3 className="text-3xl font-bold max-sm:text-xs max-sm:font-bold">
+                  +100 departamentos
+                </h3>
+                <p className="font-semibold text-xl max-sm:text-xs">
+                  de experiencia en el sector
+                </p>
+              </div>
+              <div className="w-[0.50px] bg-white"></div>
+              <div className="text-slate-50 text-center">
+                <div className="max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-5 max-sm:mt-4"></div>
+                <h3 className="text-3xl font-bold max-sm:text-xs max-sm:font-bold">
+                  +20 aliados
+                </h3>
+                <p className="font-semibold text-xl max-sm:text-xs">
+                  trabajando con nosotros
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div
-        className="bg-cover bg-atras h-[500px] bg-center relative flex py-10
+        className="bg-cover bg-atras h-[800px] bg-center relative flex py-10
                       max-sm:h-[350px]"
       >
         <div className="bg-cover bg-Verde-0 w-96 h-44 static max-sm:bg-cover max-sm:w-40 max-sm:h-[5rem] ">

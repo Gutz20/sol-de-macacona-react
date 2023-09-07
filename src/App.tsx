@@ -3,6 +3,7 @@ import "./App.css";
 import { Layout } from "./components/Layout";
 import NotFound from "./components/NotFound/NotFound";
 import { About, Home, ProjectsForSale, Ubication } from "./pages";
+import { Lotes } from "./pages/Lotes";
 
 function App() {
   return (
@@ -23,16 +24,16 @@ function App() {
               element={<About />}
             />
             <Route
-              path="/ubication"
-              element={<Ubication />}
-            />
-            <Route
               path="/proyects"
               element={<ProjectsForSale />}
             />
             <Route
-              path="/lotes"
+              path="/ubication"
               element={<Ubication />}
+            />
+            <Route
+              path="/lotes"
+              element={<Lotes />}
             />
           </Route>
         </Routes>

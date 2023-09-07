@@ -1,6 +1,10 @@
-import { Formulario } from "@/components";
+
 const Lotes = () => {
-  return <div>NotFound</div>;
+  return (
+    <>
+      <p>sads</p>
+    </>
+  );
 };
 
 export default Lotes;

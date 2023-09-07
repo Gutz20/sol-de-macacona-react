@@ -68,7 +68,7 @@ const Footer = () => {
                   <InstagramIcon /> Instagram
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
-                  <WhatsAppIcon/> Whatsapp
+                  <WhatsAppIcon /> Whatsapp
                 </li>
               </ul>
             </div>

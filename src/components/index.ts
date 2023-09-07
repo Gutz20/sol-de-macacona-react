@@ -1,3 +1,4 @@
+export * from './Carrusel';
 export * from './Footer';
 export * from './Formulario';
 export * from './Layout';

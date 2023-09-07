@@ -9,6 +9,7 @@ export default {
         "form-pattern": "url('/img-bg-form.jpg')",
         fondoAboutCenter: "url('/modelos-general.jpg')",
         atras: "url('/atras.jpg')",
+        fondoUbication: "url('./bg-ubication-drawer.png')",
       },
       fontFamily: {
         Itim: ["Itim", "cursive", "bold"],
