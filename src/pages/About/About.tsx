@@ -1,5 +1,6 @@
 import { Formulario } from "@/components";
-import { Avatar, Card, CardMedia } from "@mui/material";
+import { ourTeam } from "@/helpers";
+import { Avatar } from "@mui/material";
 
 const About = () => {
   return (
@@ -10,7 +11,7 @@ const About = () => {
       >
         <div className="bg-white mx-96 text-orange-950 p-5 w-[800px] opacity-60 absolute text-5xl font-Itim text-center drop-shadow-2xl max-sm:absolute max-sm:py-4 max-sm:px-4 max-sm:opacity-60 max-sm:font-Itim max-sm:text-xl flex flex-col gap-8 max-md:mx-32 max-sm:mx-5 max-sm:gap-1 max-sm:w-[300px]">
           <h2 className="md:text-4xl">¿Quiénes somos?</h2>
-          <p className="text-2xl md:text-xl max-sm:text-xs">
+          <p className="text-2xl max-sm:text-xs">
             Somos el equipo detrás de Sol de Macacona, un grupo de profesionales
             altamente capacitados en el sector inmobiliario. Nuestra dedicación
             se centra en descubrir, desarrollar y promover los proyectos más
@@ -44,8 +45,8 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="bg-fondoAboutCenter h-screen mt-12 bg-cover max-sm:bg-fondoAboutCenter  max-sm:w-full max-sm:h-[220px]"></div>
-      <div className="my-4 flex flex-col gap-4">
+      <div className="bg-fondoAboutCenter h-screen pt-12 bg-cover max-sm:bg-fondoAboutCenter  max-sm:w-full max-sm:h-[220px]"></div>
+      <div className="py-4 flex flex-col gap-4 bg-white">
         <h3 className="text-center font-bold text-3xl max-sm:text-3xl ">
           Valores
         </h3>
@@ -73,53 +74,22 @@ const About = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center gap-4 my-4">
-          <h3 className="font-bold text-3xl ">Nuestro Equipo</h3>
-          <div className="flex max-sm:flex-col gap-20 max-sm:gap-5">
-            <div className="flex flex-col items-center justify-center">
-              <Avatar
-                alt="gerente"
-                sx={{ width: 80, height: 80 }}
-                src="https://reqres.in/img/faces/6-image.jpg"
-              />
-              <span className="text-lg font-semibold">Enrique Zapata</span>
-              <span className="text-lg font-semibold">Gerente General</span>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <Avatar
-                alt="gerente"
-                sx={{ width: 80, height: 80 }}
-                src="https://reqres.in/img/faces/8-image.jpg"
-              />
-              <span className="text-lg font-semibold">Enrique Zapata</span>
-              <span className="text-lg font-semibold">Gerente General</span>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <Avatar
-                alt="gerente"
-                sx={{ width: 80, height: 80 }}
-                src="https://reqres.in/img/faces/9-image.jpg"
-              />
-              <span className="text-lg font-semibold">Enrique Zapata</span>
-              <span className="text-lg font-semibold">Gerente General</span>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <Avatar
-                alt="gerente"
-                sx={{ width: 80, height: 80 }}
-                src="https://reqres.in/img/faces/10-image.jpg"
-              />
-              <span className="text-lg font-semibold">Enrique Zapata</span>
-              <span className="text-lg font-semibold">Gerente General</span>
-            </div>
-            <div className="flex flex-col items-center justify-center">
-              <Avatar
-                alt="gerente"
-                sx={{ width: 80, height: 80 }}
-                src="https://reqres.in/img/faces/11-image.jpg"
-              />
-              <span className="text-lg font-semibold">Enrique Zapata</span>
-              <span className="text-lg font-semibold">Gerente General</span>
-            </div>
+          <h3 className="font-bold text-3xl">Nuestro Equipo</h3>
+          <div className="flex max-sm:flex-col gap-10 max-sm:gap-5">
+            {ourTeam.map(({ src, alt }, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center shadow-lg p-5 rounded-lg border hover:border-red-400 transition-all"
+              >
+                <Avatar
+                  alt={alt}
+                  sx={{ width: 80, height: 80 }}
+                  src={src}
+                />
+                <span className="text-lg font-semibold">Enrique Zapata</span>
+                <span className="text-sm font-semibold">Gerente General</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

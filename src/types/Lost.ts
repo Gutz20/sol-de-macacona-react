@@ -1,6 +1,20 @@
 export type Models = "A" | "B";
 export type Views = "A" | "B" | "C";
 
+export type stateLotes = {
+  model: Models;
+  view: Views;
+  image: string;
+  characteristics: string[];
+};
+
+export type Area = {
+  name: string;
+  state: string;
+  lotes: { name: string; area: number }[];
+  adjacentAreas: string[];
+};
+
 export const updateImage: Record<Views, Record<Models, string>> = {
   // Vista
   A: {
@@ -15,4 +29,18 @@ export const updateImage: Record<Views, Record<Models, string>> = {
     A: "./casa5.jpg",
     B: "./casa1.jpg",
   },
+};
+
+export const characteristicsData: Record<Models, string[]> = {
+  A: [
+    "Áreas verdes",
+    "Lavandería",
+    "Comedor",
+    "6 dormitorios",
+    "Terraza",
+    "Sala",
+    "Cocina",
+    "Estudio",
+  ],
+  B: ["Áreas verdes", "Lavandería", "Comedor", "6 dormitorios", "Terraza"],
 };
