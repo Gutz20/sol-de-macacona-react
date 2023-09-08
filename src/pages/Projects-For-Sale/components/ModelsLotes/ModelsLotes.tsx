@@ -37,7 +37,7 @@ const ModelsLotes = () => {
   return (
     <>
       <div className="container mx-auto">
-        <h2 className="text-center text-4xl my-4 pb-4 text-green-900 font-bold font-Itim mb-2">
+        <h2 className="text-center text-4xl my-4 pb-4 text-green-900 font-bold font-Itim mb-2 max-sm:my-6">
           Lotes disponibles con acabados de lujo
         </h2>
         <div className="flex justify-center items-center gap-8">
@@ -50,13 +50,13 @@ const ModelsLotes = () => {
           </ButtonGroup>
         </div>
 
-        <div className="grid grid-cols-4 my-4 gap-4">
+        <div className="grid grid-cols-4 my-4 gap-4 max-sm:flex max-sm:flex-col max-sm:mx-5">
           {/* Caracteristicas */}
-          <div className="col-span-1">
-            <h3 className="font-bold text-xl uppercase text-center">
+          <div className="col-span-1 ">
+            <h3 className="font-bold text-xl uppercase text-center ">
               Modelo A
             </h3>
-            <p className="text-center font-bold text-lg">
+            <p className="text-center font-bold text-lg max-sm:my-2">
               Área total: 48.35 m2
             </p>
             <Card>

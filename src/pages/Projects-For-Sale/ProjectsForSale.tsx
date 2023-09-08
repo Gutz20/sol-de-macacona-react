@@ -12,7 +12,7 @@ const ProjectsForSale = () => {
       >
         <div
           className="w-auto text-center text-white font-Itim py-20 px-20 grid  absolute text-8xl font-bold drop-shadow-2xl
-        max-sm:absolute max-sm:py-5 max-sm:px-5  max-sm:font-Itim max-sm:text-xl"
+        max-sm:absolute max-sm:py-5 max-sm:px-5  max-sm:font-Itim max-sm:text-3xl"
         >
           <h2>PROYECTOS EN</h2>
           <h2>VENTA</h2>
