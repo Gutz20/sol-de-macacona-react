@@ -1,7 +1,6 @@
 import { Carrusel, Formulario } from "@/components";
 import { slidesHome } from "@/helpers";
 
-
 const Home = () => {
   return (
     <>
@@ -17,7 +16,7 @@ const Home = () => {
           <h2> en el entorno perfecto</h2>
         </div>
       </div>
-      <div className="bg-amber-50 py-16 max-sm:py-4">
+      <div className="bg-white py-16 max-sm:py-4">
         <div
           className="container mx-auto flex justify-center gap-4 
                  max-sm:container max-sm:mx-auto  max-sm:flex max-sm:justify-center max-sm:gap-1"
@@ -36,8 +35,7 @@ const Home = () => {
                 className=" inline-block font-Itim text-4xl w-full text-yellow-600 mb-4
                   max-sm:text-xl max-sm:mb-2 max-sm:inline-block max-lg:text-3xl"
               >
-                Explora Innovadores Espacios<br></br>
-                Residenciales en Ica para Tu Nuevo <br></br>
+                Explora Innovadores Espacios Residenciales en Ica para Tu Nuevo
                 Hogar Familiar
               </h1>
               <div className="w-full bg-gray-400 h-[0.5px] my-2"></div>

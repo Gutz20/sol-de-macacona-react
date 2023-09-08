@@ -1,6 +1,6 @@
-import { Carrusel } from "@/components";
 import Formulario from "@/components/Formulario/Formulario";
 import { ModelsLotes } from "..";
+import { Carrusel } from "@/components";
 import { slidesProjectForSale } from "@/helpers";
 
 const ProjectsForSale = () => {
@@ -18,6 +18,7 @@ const ProjectsForSale = () => {
           <h2>VENTA</h2>
         </div>
       </div>
+
       <ModelsLotes />
 
       <section className=" bg-neutral-700 py-20">
