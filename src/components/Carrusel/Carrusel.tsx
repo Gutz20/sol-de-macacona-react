@@ -1,9 +1,11 @@
 import "swiper/css";
 import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { A11y, Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { RiArrowRightCircleLine, RiArrowLeftCircleLine } from "react-icons/ri";
 
 type SlidesProps = {
   id: number;
@@ -22,12 +24,17 @@ const Carrusel = ({ slides }: CarruselProps) => {
       spaceBetween={50}
       grabCursor={true}
       centeredSlides={true}
+      loop={true}
       slidesPerView={"auto"}
       pagination={{
         clickable: true,
       }}
       modules={[Autoplay, Pagination, Navigation, A11y]}
-      className="mySwiper"
+      className="mySwiper relative group"
+      navigation={{
+        nextEl: ".button-next-slide",
+        prevEl: ".button-prev-slide",
+      }}
     >
       {slides.map(({ id, src, alt }) => (
         <SwiperSlide key={id}>
@@ -51,42 +58,14 @@ const Carrusel = ({ slides }: CarruselProps) => {
           )}
         </SwiperSlide>
       ))}
+      <div className="top-[50%] absolute z-10 button-prev-slide left-0 duration-500 w-[40px] h-[40px] text-3xl text-white bg-black grid place-items-center">
+        <RiArrowLeftCircleLine />
+      </div>
+      <div className="top-[50%] absolute z-10 button-next-slide right-0 duration-500 w-[40px] h-[40px] text-3xl text-white bg-black grid place-items-center">
+        <RiArrowRightCircleLine />
+      </div>
     </Swiper>
   );
 };
 
 export default Carrusel;
-
-{
-  /* <SwiperSlide>
-        <video
-          autoPlay
-          muted
-          loop
-          className="mx-auto w-[76%]"
-        >
-          <source
-            src="/public/VideoPromo.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src="./casa2.jpg"
-          className="w-full h-full mx-auto"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src="./casa3.jpg"
-          className="w-full h-full mx-auto"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          src="./casa2.jpg"
-          className="w-full h-full mx-auto"
-        />
-      </SwiperSlide> */
-}

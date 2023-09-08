@@ -1,21 +1,19 @@
 import { Models, Views, updateImage } from "@/types/Lost";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import PageviewIcon from "@mui/icons-material/Pageview";
 import {
   Button,
   ButtonGroup,
   Card,
   CardContent,
-  Divider,
   List,
   ListItem,
   ListItemAvatar,
   ListItemButton,
   ListItemIcon,
-  ListItemText,
+  ListItemText
 } from "@mui/material";
 import { useState } from "react";
-import InboxIcon from "@mui/icons-material/Inbox";
-import PageviewIcon from "@mui/icons-material/Pageview";
 
 const ModelsLotes = () => {
   const [estado, setEstado] = useState<{

@@ -1,5 +1,5 @@
 import { Formulario } from "@/components";
-import { Avatar, Card, CardMedia } from "@mui/material";
+import { Avatar } from "@mui/material";
 
 const About = () => {
   return (

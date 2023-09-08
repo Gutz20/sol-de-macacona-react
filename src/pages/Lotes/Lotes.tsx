@@ -1,6 +1,21 @@
 import { Formulario } from "@/components";
+import { Popover, PopperPlacementType } from "@mui/material";
+import { MouseEvent, useState } from "react";
 
 const Lotes = () => {
+  const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [open, setOpen] = useState(false);
+  const [placement, setPlacement] = useState<PopperPlacementType>();
+
+  //TODO TERMINAR EL POPOVER
+  const handleClick =
+    (newPlacement: PopperPlacementType) =>
+    (event: MouseEvent<HTMLButtonElement>) => {
+      setAnchorEl(event.currentTarget);
+      setOpen((prev) => placement !== newPlacement || !prev);
+      setPlacement(newPlacement);
+    };
+
   return (
     <>
       <div className="container mx-auto pt-40">
@@ -21,6 +36,213 @@ const Lotes = () => {
         />
 
         <map name="mapa-imagen">
+          <area
+            target="_blank"
+            alt="Area46"
+            title="Area46"
+            className="cursor-pointer"
+            onClick={() => handleClick("top")}
+            coords="232,1642,356,1641,357,1810,232,1770"
+            shape="poly"
+          />
+          <area
+            target="_blank"
+            alt="Area45"
+            title="Area45"
+            className="cursor-pointer"
+            onClick={() => console.log("first")}
+            coords="231,1571,356,1639"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area44"
+            title="Area44"
+            className="cursor-pointer"
+            onClick={() => console.log("first")}
+            coords="230,1506,357,1570"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area43"
+            title="Area43"
+            className="cursor-pointer"
+            onClick={() => console.log("first")}
+            coords="231,1438,356,1503"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area42"
+            title="Area42"
+            className="cursor-pointer"
+            onClick={() => console.log("first")}
+            coords="231,1372,356,1436"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area41"
+            title="Area41"
+            className="cursor-pointer"
+            onClick={() => console.log("first")}
+            coords="230,1304,355,1369"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area40"
+            title="Area40"
+            className="cursor-pointer"
+            onClick={() => console.log("first")}
+            coords="233,1237,355,1299"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area39"
+            title="Area39"
+            className="cursor-pointer"
+            onClick={() => console.log("first")}
+            coords="233,1170,356,1234"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area38"
+            title="Area38"
+            className="cursor-pointer"
+            onClick={() => console.log("first")}
+            coords="234,1104,355,1167"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area37"
+            title="Area37"
+            className="cursor-pointer"
+            onClick={() => console.log("first")}
+            coords="235,1036,357,1101"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area36"
+            title="Area36"
+            className="cursor-pointer"
+            onClick={() => console.log("first")}
+            coords="234,970,355,1033"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area35"
+            title="Area35"
+            className="cursor-pointer"
+            onClick={() => console.log("first")}
+            coords="234,903,355,966"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area34"
+            title="Area34"
+            className="cursor-pointer"
+            onClick={() => console.log("first")}
+            coords="237,834,355,900"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area33"
+            title="Area33"
+            className="cursor-pointer"
+            onClick={() => console.log("area 33")}
+            coords="236,768,356,833"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area32"
+            title="Area32"
+            className="cursor-pointer"
+            onClick={() => console.log("area 32")}
+            coords="238,701,354,764"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area31"
+            title="Area31"
+            className="cursor-pointer"
+            onClick={() => console.log("area 31")}
+            coords="238,636,353,697"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area30"
+            title="Area30"
+            className="cursor-pointer"
+            onClick={() => console.log("area 30")}
+            coords="239,567,353,633"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area29"
+            title="Area29"
+            className="cursor-pointer"
+            onClick={() => console.log("area 29")}
+            coords="239,499,354,564"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area28"
+            title="Area28"
+            className="cursor-pointer"
+            onClick={() => console.log("area 28")}
+            coords="239,434,354,496"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area27"
+            title="Area27"
+            className="cursor-pointer"
+            onClick={() => console.log("area 27")}
+            coords="240,365,353,430"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area26"
+            title="Area26"
+            className="cursor-pointer"
+            onClick={() => console.log("area 26")}
+            coords="239,297,353,361"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area25"
+            title="Area25"
+            className="cursor-pointer"
+            onClick={() => console.log("area 25")}
+            coords="241,231,353,294"
+            shape="rect"
+          />
+          <area
+            target="_blank"
+            alt="Area24"
+            title="Area24"
+            className="cursor-pointer"
+            onClick={() => console.log("area 24")}
+            coords="18,173,15,15,351,94,353,229,244,229,243,193,237,171,222,156,203,147,190,147,170,157,150,173"
+            shape="poly"
+          />
           <area
             target="_blank"
             alt="Area23"
@@ -226,213 +448,6 @@ const Lotes = () => {
             className="cursor-pointer"
             onClick={() => console.log("area 1")}
             coords="17,1635,19,1703,137,1739,138,1635"
-            shape="poly"
-          />
-          <area
-            target="_blank"
-            alt="Area24"
-            title="Area24"
-            className="cursor-pointer"
-            onClick={() => console.log("area 24")}
-            coords="18,173,15,15,351,94,353,229,244,229,243,193,237,171,222,156,203,147,190,147,170,157,150,173"
-            shape="poly"
-          />
-          <area
-            target="_blank"
-            alt="Area25"
-            title="Area25"
-            className="cursor-pointer"
-            onClick={() => console.log("area 25")}
-            coords="241,231,353,294"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area26"
-            title="Area26"
-            className="cursor-pointer"
-            onClick={() => console.log("area 26")}
-            coords="239,297,353,361"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area27"
-            title="Area27"
-            className="cursor-pointer"
-            onClick={() => console.log("area 27")}
-            coords="240,365,353,430"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area28"
-            title="Area28"
-            className="cursor-pointer"
-            onClick={() => console.log("area 28")}
-            coords="239,434,354,496"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area29"
-            title="Area29"
-            className="cursor-pointer"
-            onClick={() => console.log("area 29")}
-            coords="239,499,354,564"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area30"
-            title="Area30"
-            className="cursor-pointer"
-            onClick={() => console.log("area 30")}
-            coords="239,567,353,633"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area31"
-            title="Area31"
-            className="cursor-pointer"
-            onClick={() => console.log("area 31")}
-            coords="238,636,353,697"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area32"
-            title="Area32"
-            className="cursor-pointer"
-            onClick={() => console.log("area 32")}
-            coords="238,701,354,764"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area33"
-            title="Area33"
-            className="cursor-pointer"
-            onClick={() => console.log("area 33")}
-            coords="236,768,356,833"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area34"
-            title="Area34"
-            className="cursor-pointer"
-            onClick={() => console.log("first")}
-            coords="237,834,355,900"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area35"
-            title="Area35"
-            className="cursor-pointer"
-            onClick={() => console.log("first")}
-            coords="234,903,355,966"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area36"
-            title="Area36"
-            className="cursor-pointer"
-            onClick={() => console.log("first")}
-            coords="234,970,355,1033"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area37"
-            title="Area37"
-            className="cursor-pointer"
-            onClick={() => console.log("first")}
-            coords="235,1036,357,1101"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area38"
-            title="Area38"
-            className="cursor-pointer"
-            onClick={() => console.log("first")}
-            coords="234,1104,355,1167"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area39"
-            title="Area39"
-            className="cursor-pointer"
-            onClick={() => console.log("first")}
-            coords="233,1170,356,1234"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area40"
-            title="Area40"
-            className="cursor-pointer"
-            onClick={() => console.log("first")}
-            coords="233,1237,355,1299"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area41"
-            title="Area41"
-            className="cursor-pointer"
-            onClick={() => console.log("first")}
-            coords="230,1304,355,1369"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area42"
-            title="Area42"
-            className="cursor-pointer"
-            onClick={() => console.log("first")}
-            coords="231,1372,356,1436"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area43"
-            title="Area43"
-            className="cursor-pointer"
-            onClick={() => console.log("first")}
-            coords="231,1438,356,1503"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area44"
-            title="Area44"
-            className="cursor-pointer"
-            onClick={() => console.log("first")}
-            coords="230,1506,357,1570"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area45"
-            title="Area45"
-            className="cursor-pointer"
-            onClick={() => console.log("first")}
-            coords="231,1571,356,1639"
-            shape="rect"
-          />
-          <area
-            target="_blank"
-            alt="Area46"
-            title="Area46"
-            className="cursor-pointer"
-            onClick={() => console.log("first")}
-            coords="232,1642,356,1641,357,1810,232,1770"
             shape="poly"
           />
         </map>
