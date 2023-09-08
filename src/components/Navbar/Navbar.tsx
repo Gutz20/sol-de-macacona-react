@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
-      <header className="absolute w-full z-10 ">
+      <header className="absolute w-full z-10  max-sm:absolute max-sm:top-4">
         <div className="container mx-auto ">
           <nav className="flex justify-between px-5">
             <Link to="/">
