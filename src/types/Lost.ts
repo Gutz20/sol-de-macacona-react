@@ -11,7 +11,7 @@ export type stateLotes = {
 export type Area = {
   name: string;
   state: string;
-  lotes: { name: string; area: number }[];
+  area: number;
   adjacentAreas: string[];
 };
 
