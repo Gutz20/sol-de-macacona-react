@@ -1,25 +1,16 @@
 import { Formulario } from "@/components";
 import { areasData, informationLotes } from "@/helpers";
 import { Area } from "@/types";
-import {
-  Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-} from "@mui/material";
 import { useState } from "react";
+import { AreaDialog } from ".";
 
 const Lotes = () => {
   const [open, setOpen] = useState(false);
   const [selectedArea, setSelectedArea] = useState<Area | null>(null);
 
-  //TODO Falta hacer dinamico el contenido del dialog pero ya solamente es jalar del selectedArea
   const onAreaOpen = (areaName: string) => {
     const areaInfo = informationLotes.find((area) => area.name === areaName);
-
-    setSelectedArea(areaInfo || null);
+    setSelectedArea(areaInfo ?? null);
     setOpen(true);
   };
 
@@ -62,53 +53,11 @@ const Lotes = () => {
         </map>
       </div>
 
-      <Dialog
+      <AreaDialog
         open={open}
-        onClose={onAreaClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">
-          {selectedArea
-            ? `Información de ${selectedArea.name}`
-            : "Informacion de Lote"}
-        </DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            <div className="flex justify-between gap-4">
-              <span>
-                Estado: <span className="text-green-500">Libre</span>
-              </span>
-              <div className="flex gap-4">
-                <span className="text-red-500">Vendido</span>
-                <span className="text-yellow-500">Separado</span>
-              </div>
-            </div>
-            <div className="grid grid-cols-3">
-              <div className="bg-gray-300 text-slate-950 font-semibold h-64 flex flex-col items-center justify-center p-4 border-dashed border-yellow-500 border-2">
-                <span>Lote 21</span>
-                <span>Area 276.41 m²</span>
-              </div>
-              <div className="bg-green-300 text-slate-950 font-semibold h-64 flex flex-col items-center justify-center p-4 border-dashed border-green-500 border-2">
-                <span>Lote 20</span>
-                <span>Area 287.67 m² </span>
-              </div>
-              <div className="bg-gray-300 text-slate-950 font-semibold h-64 flex flex-col items-center justify-center p-4 border-dashed border-red-500 border-2">
-                <span>Lote 19</span>
-                <span>Area 286.86 m²</span>
-              </div>
-            </div>
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button
-            onClick={onAreaClose}
-            autoFocus
-          >
-            Salir
-          </Button>
-        </DialogActions>
-      </Dialog>
+        onAreaClose={onAreaClose}
+        selectedArea={selectedArea}
+      />
 
       <Formulario />
     </>
