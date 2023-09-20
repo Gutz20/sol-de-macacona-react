@@ -25,7 +25,7 @@ export const slidesHome = [
   { id: 1, src: "./VideoPromo.mp4", alt: "video promo" },
   { id: 2, src: "./casa2.jpg", alt: "casa 2" },
   { id: 3, src: "./casa3.jpg", alt: " casa 3" },
-  { id: 4, src: "./casa3.jpg", alt: "casa 4" },
+  { id: 4, src: "./casa5.jpg", alt: "casa 4" },
 ];
 
 export const slidesProjectForSale = [

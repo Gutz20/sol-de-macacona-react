@@ -86,7 +86,7 @@ const About = () => {
                   sx={{ width: 80, height: 80 }}
                   src={src}
                 />
-                <span className="text-lg font-semibold">Enrique Zapata</span>
+                <span className="text-lg font-semibold">Humberto Oliva</span>
                 <span className="text-sm font-semibold">Gerente General</span>
               </div>
             ))}
