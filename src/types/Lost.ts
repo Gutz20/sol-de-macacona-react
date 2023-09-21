@@ -1,5 +1,5 @@
 export type Models = "A" | "B";
-export type Views = "A" | "B" | "C";
+export type Views = "PRINCIPAL" | "POSTERIOR" | "PRIMER_PISO" | "SEGUNDO_PISO";
 
 export type stateLotes = {
   model: Models;
@@ -17,17 +17,21 @@ export type Area = {
 
 export const updateImage: Record<Views, Record<Models, string>> = {
   // Vista
-  A: {
-    A: "./casa1.jpg", // Modelo
-    B: "./casa2.jpg", // Modelo
+  PRINCIPAL: {
+    A: "./CASA TIPO 1- FACHADA PRINCIPAL.jpg", // Modelo
+    B: "./CASA TIPO 2- FACHADA PRINCIPAL.jpg", // Modelo
   },
-  B: {
-    A: "./casa3.jpg",
-    B: "./casa4.jpg",
+  POSTERIOR: {
+    A: "./CASA TIPO 1- FACHADA POSTERIOR.jpg",
+    B: "./CASA TIPO 2 - FACHADA POSTERIOR.jpg",
   },
-  C: {
-    A: "./casa5.jpg",
-    B: "./casa1.jpg",
+  PRIMER_PISO: {
+    A: "./1er Piso Modelo A.jpg",
+    B: "./1er Piso Modelo B.jpg",
+  },
+  SEGUNDO_PISO: {
+    A: "./2do Piso Modelo A.jpg",
+    B: "./2do Piso Modelo B.jpg",
   },
 };
 

@@ -4,6 +4,9 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
+import { RiTiktokFill } from "react-icons/ri";
+import { Twitter } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -39,19 +42,19 @@ const Footer = () => {
               <h2 className="text-xl text-white font-bold">Menu</h2>
               <ul>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
-                  Inicio
+                  <Link to="/">Inicio</Link>
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
-                  Sobre Nosotros
+                  <Link to="/about">Sobre Nosotros</Link>
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
-                  Ubicación
+                  <Link to="/ubication">Ubicación</Link>
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
-                  Proyectos en Venta
+                  <Link to="/proyects">Proyectos en Venta</Link>
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
-                  Lotes
+                  <Link to="/lotes">Lotes</Link>
                 </li>
               </ul>
             </div>
@@ -62,13 +65,46 @@ const Footer = () => {
               <h2 className="text-xl text-white font-bold">Redes Sociales</h2>
               <ul>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
-                  <FacebookIcon /> Facebook
+                  <FacebookIcon />
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100089758972647"
+                    type="blank_"
+                  >
+                    Facebook
+                  </a>
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
-                  <InstagramIcon /> Instagram
+                  <InstagramIcon />{" "}
+                  <a
+                    href="https://www.instagram.com/soldemacacona?fbclid=IwAR1x9H8-kJMTF58fXLr6QzAKedEcMFrttGvxTLvRHRDS3J_AaSJeHX6DXxI"
+                    type="blank_"
+                  >
+                    Instagram
+                  </a>
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
-                  <WhatsAppIcon /> Whatsapp
+                  <Twitter />{" "}
+                  <a
+                    href="https://twitter.com/SoldeMacacona?fbclid=IwAR0CUpgfIuNDqhuJmqjBjlcUuxVMGKlyenal7Yb_ubV1x5QwwSNvJysoqsI"
+                    type="blank_"
+                  >
+                    Twitter
+                  </a>
+                </li>
+                <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
+                  <WhatsAppIcon />{" "}
+                  <a href="https://w.app/SolDeMacacona" type="blank_">
+                    Whatsapp
+                  </a>
+                </li>
+                <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-4 max-lg:justify-center">
+                  <RiTiktokFill />{" "}
+                  <a
+                    href="https://www.tiktok.com/@soldemacacona?is_from_webapp=1&sender_device=pc"
+                    type="blank_"
+                  >
+                    Tiktok
+                  </a>
                 </li>
               </ul>
             </div>
@@ -79,13 +115,17 @@ const Footer = () => {
               <h2 className="text-xl text-white font-bold">Otros</h2>
               <ul>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
-                  <LocationOnIcon /> Panamericana Sur Km 295 Subtanjalla - Ica
+                  <LocationOnIcon />{" "}
+                  <a href="https://maps.app.goo.gl/rnLJGUBuf4fKUPND8">
+                    Panamericana Sur Km 295 Subtanjalla - Ica
+                  </a>
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
                   <EmailIcon /> alguncorreo@gmail.com
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
-                  <PhoneIcon /> +51 905 452 633
+                  <PhoneIcon />
+                  <a href="tel:+51 905 452 633">+51 905 452 633</a>
                 </li>
               </ul>
             </div>
