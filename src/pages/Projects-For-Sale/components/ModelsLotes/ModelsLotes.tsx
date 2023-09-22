@@ -33,7 +33,7 @@ const ModelsLotes = () => {
   const [expanded, setExpanded] = useState<string | false>("characters-panel");
 
   const onAccordionChange =
-    (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
+    (panel: string) => (_: React.SyntheticEvent, newExpanded: boolean) => {
       setExpanded(newExpanded ? panel : false);
     };
 
