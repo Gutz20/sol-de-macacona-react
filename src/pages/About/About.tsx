@@ -10,7 +10,7 @@ const About = () => {
       >
         <div className="bg-white mx-96 text-orange-950 p-5 w-[800px] opacity-60 absolute text-5xl font-Itim text-center drop-shadow-2xl max-sm:absolute max-sm:py-4 max-sm:px-4 max-sm:opacity-60 max-sm:font-Itim max-sm:text-xl flex flex-col gap-8 max-md:mx-32 max-sm:mx-5 max-sm:gap-1 max-sm:w-[300px]">
           <h2 className="md:text-4xl">¿Quiénes somos?</h2>
-          <p className="text-2xl md:text-xl max-sm:text-xs">
+          <p className="text-2xl  max-sm:text-xs">
             Somos el equipo detrás de Sol de Macacona, un grupo de profesionales
             altamente capacitados en el sector inmobiliario. Nuestra dedicación
             se centra en descubrir, desarrollar y promover los proyectos más
