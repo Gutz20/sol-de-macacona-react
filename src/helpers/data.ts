@@ -39,22 +39,32 @@ export const ourTeam = [
   {
     src: "https://reqres.in/img/faces/6-image.jpg",
     alt: "Gerente",
+    name: "Humberto Oliva",
+    position: "Gerente"
   },
   {
     src: "https://reqres.in/img/faces/7-image.jpg",
     alt: "Gerente",
+    name: "Juan",
+    position: "Gerente"
   },
   {
     src: "https://reqres.in/img/faces/8-image.jpg",
     alt: "Gerente",
+    name: "Pedro",
+    position: "Gerente"
   },
   {
     src: "https://reqres.in/img/faces/9-image.jpg",
     alt: "Gerente",
+    name: "Pablo",
+    position: "Gerente"
   },
   {
     src: "https://reqres.in/img/faces/10-image.jpg",
     alt: "Gerente",
+    name: "Daniel",
+    position: "Gerente"
   },
 ];
 
