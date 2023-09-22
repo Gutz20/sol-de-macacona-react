@@ -10,6 +10,7 @@ export default {
         fondoAboutCenter: "url('/modelos-general.jpg')",
         atras: "url('/atras.jpg')",
         fondoUbication: "url('./bg-ubication-drawer.png')",
+        fondoHome: "url('./primera_impresion.jpg')",
       },
       fontFamily: {
         Itim: ["Itim", "cursive", "bold"],

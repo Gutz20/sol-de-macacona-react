@@ -68,7 +68,7 @@ const Footer = () => {
                   <FacebookIcon />
                   <a
                     href="https://www.facebook.com/profile.php?id=100089758972647"
-                    type="blank_"
+                    target="_blank"
                   >
                     Facebook
                   </a>
@@ -77,7 +77,7 @@ const Footer = () => {
                   <InstagramIcon />{" "}
                   <a
                     href="https://www.instagram.com/soldemacacona?fbclid=IwAR1x9H8-kJMTF58fXLr6QzAKedEcMFrttGvxTLvRHRDS3J_AaSJeHX6DXxI"
-                    type="blank_"
+                    target="_blank"
                   >
                     Instagram
                   </a>
@@ -86,14 +86,14 @@ const Footer = () => {
                   <Twitter />{" "}
                   <a
                     href="https://twitter.com/SoldeMacacona?fbclid=IwAR0CUpgfIuNDqhuJmqjBjlcUuxVMGKlyenal7Yb_ubV1x5QwwSNvJysoqsI"
-                    type="blank_"
+                    target="_blank"
                   >
                     Twitter
                   </a>
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
                   <WhatsAppIcon />{" "}
-                  <a href="https://w.app/SolDeMacacona" type="blank_">
+                  <a href="https://w.app/SolDeMacacona" target="_blank">
                     Whatsapp
                   </a>
                 </li>
@@ -101,7 +101,7 @@ const Footer = () => {
                   <RiTiktokFill />{" "}
                   <a
                     href="https://www.tiktok.com/@soldemacacona?is_from_webapp=1&sender_device=pc"
-                    type="blank_"
+                    target="_blank"
                   >
                     Tiktok
                   </a>
