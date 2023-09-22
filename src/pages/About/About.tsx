@@ -27,20 +27,21 @@ const About = () => {
               Misión
             </h2>
             <span className="font-normal text-xl text-center max-sm:font-medium max-sm:text-xs max-sm:text-center">
-              Proporcionar soluciones inmobiliarias de primera categoría a
-              nuestros clientes y socios inversionistas, asegurando diseños
-              arquitectónicos innovadores, ambientes contemporáneos y un enfoque
-              en la sostenibilidad ambiental.
+              Brindar una asesoría inmobiliaria personalizada e integral
+              orientada a personas y empresas para poder cumplir con las
+              exigencias de nuestros clientes en el mercado inmobiliario,
+              Trabajando siempre con ética profesional, con honestidad y
+              trasparencia en todas las etapas de la venta.
             </span>
           </div>
           <div className="w-2 bg-white "></div>
           <div className="flex flex-col items-center justify-center gap-2 max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:gap-1">
             <h2 className="text-3xl font-bold max-sm:text-sm ">Visión</h2>
             <span className="font-normal text-xl text-center max-sm:text-xs">
-              Alcanzar el estatus de la empresa inmobiliaria líder en Perú, a
-              través de la creación de proyectos que revolucionen su entorno y
-              promuevan la preservación del medio ambiente, consolidando así
-              nuestra distinguida reputación.
+              Convertirnos en la empresa de referencia del sector inmobiliario
+              en la provincia, con objeto de que las personas que intervienen en
+              este mercado piensen en nosotros como primera opción en el momento
+              de vender, comprar o alquilar una vivienda.
             </span>
           </div>
         </div>
@@ -81,12 +82,8 @@ const About = () => {
                 key={index}
                 className="flex flex-col items-center justify-center shadow-lg p-5 rounded-lg border hover:border-red-400 transition-all"
               >
-                <Avatar
-                  alt={alt}
-                  sx={{ width: 80, height: 80 }}
-                  src={src}
-                />
-                <span className="text-lg font-semibold">Enrique Zapata</span>
+                <Avatar alt={alt} sx={{ width: 80, height: 80 }} src={src} />
+                <span className="text-lg font-semibold">Humberto Oliva</span>
                 <span className="text-sm font-semibold">Gerente General</span>
               </div>
             ))}

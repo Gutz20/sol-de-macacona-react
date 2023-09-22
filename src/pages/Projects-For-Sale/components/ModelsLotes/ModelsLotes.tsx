@@ -26,8 +26,8 @@ import { useState } from "react";
 const ModelsLotes = () => {
   const [estado, setEstado] = useState<stateLotes>({
     model: "A",
-    view: "A",
-    image: updateImage.A.A,
+    view: "PRINCIPAL",
+    image: updateImage.PRINCIPAL.A,
     characteristics: characteristicsData.A,
   });
   const [expanded, setExpanded] = useState<string | false>("characters-panel");
@@ -57,10 +57,7 @@ const ModelsLotes = () => {
           Lotes disponibles con acabados de lujo
         </h2>
         <div className="flex justify-center items-center gap-8">
-          <ButtonGroup
-            variant="contained"
-            aria-label="outlined button group"
-          >
+          <ButtonGroup variant="contained" aria-label="outlined button group">
             <Button onClick={() => onModelChange("A")}>Modelo A</Button>
             <Button onClick={() => onModelChange("B")}>Modelo B</Button>
           </ButtonGroup>
@@ -76,7 +73,7 @@ const ModelsLotes = () => {
               Vista {estado.view}
             </h3>
             <p className="text-center font-bold text-lg max-sm:my-2 text-gray-800">
-              Área total: 48.35 m2
+              Áreas desde desde 265m2 a 350m2
             </p>
             <Accordion
               expanded={expanded === "characters-panel"}
@@ -108,7 +105,7 @@ const ModelsLotes = () => {
           {/* Image */}
           <div className="col-span-2">
             <div className="flex items-center justify-center h-full">
-              <div className="w-full h-96 overflow-hidden">
+              <div className="w-full  overflow-hidden">
                 <img
                   src={estado.image}
                   alt="Casa"
@@ -125,27 +122,35 @@ const ModelsLotes = () => {
               </h2>
               <List sx={{ p: 0 }}>
                 <ListItem disablePadding>
-                  <ListItemButton onClick={() => onViewChange("A")}>
+                  <ListItemButton onClick={() => onViewChange("PRINCIPAL")}>
                     <ListItemIcon>
                       <PageviewIcon />
                     </ListItemIcon>
-                    <ListItemText primary="Vista A" />
+                    <ListItemText primary="FACHADA PRINCIPAL" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                  <ListItemButton onClick={() => onViewChange("B")}>
+                  <ListItemButton onClick={() => onViewChange("POSTERIOR")}>
                     <ListItemIcon>
                       <PageviewIcon />
                     </ListItemIcon>
-                    <ListItemText primary="Vista B" />
+                    <ListItemText primary="FACHADA POSTERIOR" />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                  <ListItemButton onClick={() => onViewChange("C")}>
+                  <ListItemButton onClick={() => onViewChange("PRIMER_PISO")}>
                     <ListItemIcon>
                       <PageviewIcon />
                     </ListItemIcon>
-                    <ListItemText primary="Vista C" />
+                    <ListItemText primary="PLANO PRIMER PISO" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton onClick={() => onViewChange("SEGUNDO_PISO")}>
+                    <ListItemIcon>
+                      <PageviewIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="PLANO SEGUNDO PISO" />
                   </ListItemButton>
                 </ListItem>
               </List>

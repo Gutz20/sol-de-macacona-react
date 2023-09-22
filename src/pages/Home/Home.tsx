@@ -5,13 +5,15 @@ const Home = () => {
   return (
     <>
       <div
-        className="bg-cover bg-fondo1 w-full h-[800px] bg-center relative flex items-center justify-center 
-      max-sm:w-full max-sm:bg-cover max-sm:bg-fondo1 max-sm:h-[250px] max-sm:bg-center max-sm:relative max-sm:flex max-sm:items-center max-sm:justify-center"
-      >
+        className="bg-cover  w-full h-[100] bg-center relative flex items-center justify-center 
+      max-sm:w-full max-sm:bg-cover  max-sm:h-[250px] max-sm:bg-center max-sm:relative max-sm:flex max-sm:items-center max-sm:justify-center"
+      ><img src="/primera impresion.jpg"></img>
         <div
           className="w-auto text-center bg-white text-orange-950 py-20 px-20 grid opacity-60 absolute text-5xl font-Itim drop-shadow-2xl
         max-sm:absolute max-sm:py-5 max-sm:px-5 max-sm:opacity-60 max-sm:font-Itim max-sm:text-xl"
         >
+          <h2>H.O. Constructores E.I.R.L</h2>
+          <h2>-------------------------------</h2>
           <h2>Descubre el Placer de vivir</h2>
           <h2> en el entorno perfecto</h2>
         </div>
@@ -57,34 +59,16 @@ const Home = () => {
           <div className="flex items-center justify-center flex-col gap-8">
             <Carrusel slides={slidesHome} />
             <div className="flex gap-8 justify-center mx-5 max-sm:gap-2 ">
-              <div className="text-slate-50 text-center">
-                <div className="max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-5 max-sm:mt-4"></div>
-                <h3 className="text-3xl font-bold max-sm:text-xs max-sm:font-bold">
-                  +10 años
-                </h3>
-                <p className="font-semibold text-xl max-sm:text-xs">
-                  de experiencia en el sector
-                </p>
-              </div>
               <div className="w-[0.50px] bg-white"></div>
               <div className="text-slate-50 text-center">
                 <div className="max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-5 max-sm:mt-4"></div>
                 <h3 className="text-3xl font-bold max-sm:text-xs max-sm:font-bold">
-                  +100 departamentos
+                  Cada lote ofrece un amplio espacio perfecto para tu familia.
                 </h3>
-                <p className="font-semibold text-xl max-sm:text-xs">
-                  de experiencia en el sector
-                </p>
               </div>
               <div className="w-[0.50px] bg-white"></div>
               <div className="text-slate-50 text-center">
                 <div className="max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-5 max-sm:mt-4"></div>
-                <h3 className="text-3xl font-bold max-sm:text-xs max-sm:font-bold">
-                  +20 aliados
-                </h3>
-                <p className="font-semibold text-xl max-sm:text-xs">
-                  trabajando con nosotros
-                </p>
               </div>
             </div>
           </div>
@@ -94,11 +78,12 @@ const Home = () => {
         className="bg-cover bg-atras h-[800px] bg-center relative flex py-10
                       max-sm:h-[350px]"
       >
-        <div className="bg-cover bg-Verde-0 w-96 h-44 static max-sm:bg-cover max-sm:w-40 max-sm:h-[5rem] ">
-          <div className="font-Itim text-black my-8 mx-10 text-xl max-sm:my-3 max-sm:mx-2 max-sm:text-xs">
+        <div className="bg-cover bg-Verde-0 w-96 h-48 static max-sm:bg-cover max-sm:w-40 max-sm:h-[5rem] ">
+          <div className="font-Itim text-black my-4 mx-10 text-xl max-sm:my-3 max-sm:mx-2 max-sm:text-xs">
             <p>
-              Cada Lote cuenta con un area con piscina y area verde para la
-              familia
+              Cada lote te brinda la libertad de disfrutar de un amplio espacio
+              verde para tu familia, y si lo deseas, también podemos incorporar
+              una piscina a medida de tus gustos y necesidades.
             </p>
           </div>
         </div>
