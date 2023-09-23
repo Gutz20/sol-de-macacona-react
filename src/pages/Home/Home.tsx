@@ -10,7 +10,7 @@ const Home = () => {
       >
         <img src="/primera_impresion.jpg" className="w-full"></img>
         <div
-          className="w-auto text-center bg-white text-orange-950 py-20 px-20 grid opacity-60 absolute text-5xl font-Itim drop-shadow-2xl
+          className="w-auto text-center bg-white text-orange-950 py-20 px-20 grid opacity-40 absolute text-5xl font-Itim drop-shadow-2xl
         max-sm:absolute max-sm:py-5 max-sm:px-5 max-sm:opacity-60 max-sm:font-Itim max-sm:text-xl"
         >
           <h2>H.O. Constructores E.I.R.L</h2>
