@@ -1,3 +1,4 @@
+import { addEmailToExcel } from "@/api/form";
 import { FormSchema, formValidationSchema } from "@/types";
 import { DevTool } from "@hookform/devtools";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -21,12 +22,15 @@ const Formulario = () => {
     handleSubmit,
     formState: { errors },
     control,
+    reset,
   } = useForm<FormSchema>({
     resolver: zodResolver(formValidationSchema),
   });
 
-  const onSubmit: SubmitHandler<FormSchema> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<FormSchema> = async (data) => {
+    const { mail } = data;
+    await addEmailToExcel(mail); // Añade el correo del user
+    reset();
   };
 
   return (
@@ -68,6 +72,7 @@ const Formulario = () => {
                 variant="filled"
                 size="small"
                 className="w-full"
+                autoComplete="off"
                 {...register("name")}
                 error={errors.name ? true : false}
               />
@@ -83,6 +88,7 @@ const Formulario = () => {
                 variant="filled"
                 className="w-full"
                 size="small"
+                autoComplete="off"
                 type="tel"
                 {...register("dni")}
                 error={errors.dni ? true : false}
@@ -99,6 +105,7 @@ const Formulario = () => {
                 variant="filled"
                 className="w-full"
                 size="small"
+                autoComplete="off"
                 {...register("mail")}
                 error={errors.mail ? true : false}
               />
@@ -115,6 +122,7 @@ const Formulario = () => {
                 className="w-full"
                 type="number"
                 size="small"
+                autoComplete="off"
                 error={errors.mail ? true : false}
                 {...register("phone")}
               />

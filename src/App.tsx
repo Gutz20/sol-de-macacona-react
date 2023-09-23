@@ -2,7 +2,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Layout } from "./components/Layout";
 import NotFound from "./components/NotFound/NotFound";
-import { About, Home, ProjectsForSale, Ubication } from "./pages";
+import {
+  About,
+  DownloadExcel,
+  Home,
+  ProjectsForSale,
+  Ubication,
+} from "./pages";
 import { Lotes } from "./pages/Lotes";
 
 function App() {
@@ -34,6 +40,10 @@ function App() {
             <Route
               path="/lotes"
               element={<Lotes />}
+            />
+            <Route
+              path="/descargar-excel"
+              element={<DownloadExcel />}
             />
           </Route>
         </Routes>
