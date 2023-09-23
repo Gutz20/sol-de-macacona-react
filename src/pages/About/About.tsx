@@ -55,9 +55,9 @@ const About = () => {
           <div className="hover:cursor-pointer relative group">
             <div className="relative">
               <img
-                src="./img-valor-1.png"
+                src="./Proactividad.webp"
                 alt="BG"
-                className="rounded-md max-sm:w-72 transition-opacity duration-300"
+                className="rounded-md max-sm:w-72 transition-opacity duration-300 h-60 border"
               />
               <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
             </div>
@@ -74,9 +74,9 @@ const About = () => {
           <div className="hover:cursor-pointer relative group">
             <div className="relative">
               <img
-                src="./img-valor-1.png"
+                src="./Pasion.webp"
                 alt="BG"
-                className="rounded-md max-sm:w-72 transition-opacity duration-300"
+                className="rounded-md max-sm:w-72 transition-opacity duration-300 h-60"
               />
               <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
             </div>
@@ -93,9 +93,9 @@ const About = () => {
           <div className="hover:cursor-pointer relative group">
             <div className="relative">
               <img
-                src="./img-valor-1.png"
+                src="./Profesional.avif"
                 alt="BG"
-                className="rounded-md max-sm:w-72 transition-opacity duration-300"
+                className="rounded-md max-sm:w-72 transition-opacity duration-300 h-60"
               />
               <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
             </div>
@@ -120,16 +120,14 @@ const About = () => {
                 key={index}
                 className="flex flex-col items-center justify-center shadow-lg p-5 rounded-lg border hover:border-red-400 transition-all w-40"
               >
-                <Avatar
-                  alt={alt}
-                  sx={{ width: 80, height: 80 }}
-                  src={src}
-                />
+                <Avatar alt={alt} sx={{ width: 80, height: 80 }} src={src} />
 
-                <span className="text-lg font-semibold text-center">
+                <span className="text-lg font-semibold text-center ">
                   {name}
                 </span>
-                <span className="text-sm font-semibold">{position}</span>
+                <span className="text-sm font-semibold text-center">
+                  {position}
+                </span>
               </div>
             ))}
           </div>

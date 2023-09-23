@@ -52,7 +52,7 @@ const Formulario = () => {
         </div>
         <div className="w-full max-sm:w-[350px] max-sm:p-10 max-sm:rounded-3xl bg-white rounded-lg p-8 bg-opacity-70">
           <h3 className="text-3xl font-bold text-black max-sm:text-xl max-sm:ml-4 uppercase">
-            Regala un lote!!!
+            Separa tu lote ya!!!
           </h3>
           <p className="text-gray-800 text-xl max-sm:text-xs max-sm:ml-4 font-semibold">
             ¿Deseas agendar una cita o solicitar más información? Déjanos tus
@@ -179,11 +179,7 @@ const Formulario = () => {
                     )}
                   </RadioGroup>
                 </FormControl>
-                <Button
-                  type="submit"
-                  variant="contained"
-                  endIcon={<Send />}
-                >
+                <Button type="submit" variant="contained" endIcon={<Send />}>
                   Enviar
                 </Button>
               </div>

@@ -73,7 +73,7 @@ const ModelsLotes = () => {
               Vista {estado.view}
             </h3>
             <p className="text-center font-bold text-lg max-sm:my-2 text-gray-800">
-              Áreas desde desde 265m2 a 350m2
+              Áreas desde 265m2 a 350m2
             </p>
             <Accordion
               expanded={expanded === "characters-panel"}

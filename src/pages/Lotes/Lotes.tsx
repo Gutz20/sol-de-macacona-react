@@ -30,6 +30,7 @@ const Lotes = () => {
             con tu visión y construye el futuro que mereces.
           </p>
         </div>
+        <p className="">Revisa el estado de cada lote dando click*</p>
         <img
           src="./planos-with-lines.png"
           alt="Plano"
