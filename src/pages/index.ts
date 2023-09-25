@@ -1,4 +1,5 @@
 export * from './About';
+export * from './DownloadExcel';
 export * from './Home';
 export * from './Lotes/components';
 export * from './Lotes';

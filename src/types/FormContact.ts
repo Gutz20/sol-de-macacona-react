@@ -6,7 +6,7 @@ export const formValidationSchema = z.object({
     .string()
     .min(8, { message: "Minimo de 8 caracteres." })
     .max(8, { message: "Maximo de 8 caracteres." }),
-  mail: z.string().email("Email Invalido."),
+  email: z.string().email("Email Invalido."),
   phone: z.string(),
   message: z.string().min(20, { message: "Ingresa tu opinión por favor." }),
   terms: z.boolean(),

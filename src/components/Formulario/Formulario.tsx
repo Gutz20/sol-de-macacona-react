@@ -1,3 +1,4 @@
+import { addEmailToExcel } from "@/api/form";
 import { FormSchema, formValidationSchema } from "@/types";
 import { DevTool } from "@hookform/devtools";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -21,12 +22,14 @@ const Formulario = () => {
     handleSubmit,
     formState: { errors },
     control,
+    reset,
   } = useForm<FormSchema>({
     resolver: zodResolver(formValidationSchema),
   });
 
-  const onSubmit: SubmitHandler<FormSchema> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<FormSchema> = async (data) => {
+    await addEmailToExcel(data);
+    reset();
   };
 
   return (
@@ -68,6 +71,7 @@ const Formulario = () => {
                 variant="filled"
                 size="small"
                 className="w-full"
+                autoComplete="off"
                 {...register("name")}
                 error={errors.name ? true : false}
               />
@@ -83,6 +87,7 @@ const Formulario = () => {
                 variant="filled"
                 className="w-full"
                 size="small"
+                autoComplete="off"
                 type="tel"
                 {...register("dni")}
                 error={errors.dni ? true : false}
@@ -99,12 +104,13 @@ const Formulario = () => {
                 variant="filled"
                 className="w-full"
                 size="small"
-                {...register("mail")}
-                error={errors.mail ? true : false}
+                autoComplete="off"
+                {...register("email")}
+                error={errors.email ? true : false}
               />
-              {errors.mail && (
+              {errors.email && (
                 <p className="text-red-800 text-xs font-semibold">
-                  {errors.mail.message}
+                  {errors.email.message}
                 </p>
               )}
             </div>
@@ -115,7 +121,8 @@ const Formulario = () => {
                 className="w-full"
                 type="number"
                 size="small"
-                error={errors.mail ? true : false}
+                autoComplete="off"
+                error={errors.phone ? true : false}
                 {...register("phone")}
               />
               {errors.phone && (
@@ -133,7 +140,7 @@ const Formulario = () => {
                 size="small"
                 rows={3}
                 multiline
-                error={errors.mail ? true : false}
+                error={errors.message ? true : false}
                 {...register("message")}
               />
               {errors.message && (
@@ -179,7 +186,11 @@ const Formulario = () => {
                     )}
                   </RadioGroup>
                 </FormControl>
-                <Button type="submit" variant="contained" endIcon={<Send />}>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  endIcon={<Send />}
+                >
                   Enviar
                 </Button>
               </div>
