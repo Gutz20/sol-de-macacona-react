@@ -28,8 +28,7 @@ const Formulario = () => {
   });
 
   const onSubmit: SubmitHandler<FormSchema> = async (data) => {
-    const { mail } = data;
-    await addEmailToExcel(mail); // Añade el correo del user
+    await addEmailToExcel(data);
     reset();
   };
 
@@ -106,12 +105,12 @@ const Formulario = () => {
                 className="w-full"
                 size="small"
                 autoComplete="off"
-                {...register("mail")}
-                error={errors.mail ? true : false}
+                {...register("email")}
+                error={errors.email ? true : false}
               />
-              {errors.mail && (
+              {errors.email && (
                 <p className="text-red-800 text-xs font-semibold">
-                  {errors.mail.message}
+                  {errors.email.message}
                 </p>
               )}
             </div>
@@ -123,7 +122,7 @@ const Formulario = () => {
                 type="number"
                 size="small"
                 autoComplete="off"
-                error={errors.mail ? true : false}
+                error={errors.phone ? true : false}
                 {...register("phone")}
               />
               {errors.phone && (
@@ -141,7 +140,7 @@ const Formulario = () => {
                 size="small"
                 rows={3}
                 multiline
-                error={errors.mail ? true : false}
+                error={errors.message ? true : false}
                 {...register("message")}
               />
               {errors.message && (
@@ -187,7 +186,11 @@ const Formulario = () => {
                     )}
                   </RadioGroup>
                 </FormControl>
-                <Button type="submit" variant="contained" endIcon={<Send />}>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  endIcon={<Send />}
+                >
                   Enviar
                 </Button>
               </div>
