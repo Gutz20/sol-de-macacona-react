@@ -26,6 +26,7 @@ export const slidesHome = [
   { id: 2, src: "./casa2.jpg", alt: "casa 2" },
   { id: 3, src: "./casa3.jpg", alt: " casa 3" },
   { id: 4, src: "./casa5.jpg", alt: "casa 4" },
+  { id: 5, src: "./portico_gent2.jpg", alt: "casa 5" },
 ];
 
 export const slidesProjectForSale = [
@@ -33,6 +34,7 @@ export const slidesProjectForSale = [
   { id: 2, src: "./casa2.jpg", alt: "casa 2" },
   { id: 3, src: "./casa3.jpg", alt: " casa 3" },
   { id: 4, src: "./casa5.jpg", alt: "casa 4" },
+  { id: 5, src: "./portico_gent2.jpg", alt: "casa 5" },
 ];
 
 export const ourTeam = [
@@ -332,7 +334,7 @@ export const informationLotes = [
   },
   {
     name: "Area 35",
-    state: "Libre",
+    state: "Vendido ",
     area: 640,
     adjacentAreas: ["Area 34", "Area 35", "Area 36"],
   },

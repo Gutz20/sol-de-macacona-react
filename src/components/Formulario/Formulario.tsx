@@ -43,7 +43,7 @@ const Formulario = () => {
         className="absolute bottom-0 left-1/2 transform -translate-x-80 object-cover max-sm:left-0 max-sm:translate-x-0 max-sm:w-96 max-sm:hidden max-lg:hidden"
       />
       <div
-        className="container mx-auto h-full flex items-center gap-4
+        className="container mx-auto h-[110%] flex items-center gap-4
                         max-sm:flex-col"
       >
         <div className="w-full">
@@ -53,11 +53,11 @@ const Formulario = () => {
             <span className="block">YA!</span>
           </h2>
         </div>
-        <div className="w-full max-sm:w-[350px] max-sm:p-10 max-sm:rounded-3xl bg-white rounded-lg p-8 bg-opacity-70">
-          <h3 className="text-3xl font-bold text-black max-sm:text-xl max-sm:ml-4 uppercase">
+        <div className="w-[105%] mt-10 ml-52  h-[75%] max-sm:w-[350px] max-sm:p-10 max-sm:rounded-3xl bg-white rounded-lg p-8 opacity-0 hover:opacity-60">
+          <h3 className="text-[140%] font-bold text-black max-sm:text-xl max-sm:ml-4 uppercase">
             Separa tu lote ya!!!
           </h3>
-          <p className="text-gray-800 text-xl max-sm:text-xs max-sm:ml-4 font-semibold">
+          <p className="text-gray-800 text-[110%] max-sm:text-xs max-sm:ml-4 font-semibold">
             ¿Deseas agendar una cita o solicitar más información? Déjanos tus
             datos para que uno de nuestros asesores te contacte.
           </p>
@@ -138,7 +138,7 @@ const Formulario = () => {
                 variant="filled"
                 className="w-full"
                 size="small"
-                rows={3}
+                rows={2}
                 multiline
                 error={errors.message ? true : false}
                 {...register("message")}
@@ -186,11 +186,7 @@ const Formulario = () => {
                     )}
                   </RadioGroup>
                 </FormControl>
-                <Button
-                  type="submit"
-                  variant="contained"
-                  endIcon={<Send />}
-                >
+                <Button type="submit" variant="contained" endIcon={<Send />}>
                   Enviar
                 </Button>
               </div>

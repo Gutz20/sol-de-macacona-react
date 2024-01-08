@@ -10,7 +10,7 @@ const Home = () => {
       >
         <img src="/primera_impresion.jpg" className="w-full"></img>
         <div
-          className="w-auto text-center bg-white text-orange-950 py-20 px-20 grid opacity-40 absolute text-5xl font-Itim drop-shadow-2xl
+          className="w-auto mb-60 ml-[60%] text-center bg-white text-orange-950 py-6 px-12 grid opacity-40 absolute text-[170%] font-Itim drop-shadow-2xl
         max-sm:absolute max-sm:py-5 max-sm:px-5 max-sm:opacity-60 max-sm:font-Itim max-sm:text-xl"
         >
           <h2>H.O. Constructores E.I.R.L</h2>
@@ -55,9 +55,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <section className=" bg-neutral-700 py-20">
-        <div className="container mx-auto">
-          <div className="flex items-center justify-center flex-col gap-8">
+      <section className=" bg-neutral-700 py-10">
+        <div className="container  mx-auto">
+          <div className="flex items-center ml-10 justify-center flex-col gap-8">
             <Carrusel slides={slidesHome} />
             <div className="flex gap-8 justify-center mx-5 max-sm:gap-2 ">
               <div className="w-[0.50px] bg-white"></div>
