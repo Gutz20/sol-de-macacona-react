@@ -35,23 +35,19 @@ const Lotes = () => {
         <div>
           <div className="flex justify-between relative">
             <div
-              className="card bg-gradient-to-br from-green-300 to-green-600 p-6 ml-0 mr-10 mt-40 rounded-lg shadow-2xl mx-6 font-Inter w-[100%]"
+              className="card bg-gradient-to-br from-green-300 to-green-600 p-6 ml-0 mr-8 mt-40 rounded-lg shadow-2xl mx-6 font-Inter w-[100%]"
               style={{ height: "fit-content", position: "sticky", top: "20px" }}
             >
               <span className="text-white font-bold text-lg">
-                Descubre el Lote Verde
+                Construye tus Sueños en Familia
               </span>
-              <p className="text-white mt-3">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+              <p className="text-white mt-3 text-justify">
+                Un lote es más que solo tierra; es el lienzo en blanco para
+                construir los sueños de tu familia. Imagina un espacio donde
+                cada rincón refleje tus deseos, desde la acogedora sala de estar
+                hasta el jardín donde los niños corren libres. Comprar un lote
+                es la oportunidad de dar vida a tus visiones y crear recuerdos
+                duraderos en el hogar perfecto.
               </p>
               <img src="./padre_paseo.png" alt="" />
             </div>
@@ -62,24 +58,22 @@ const Lotes = () => {
               className="mx-auto relative my-12 max-sm:my-10 max-sm:mx-9"
             />
             <div
-              className="card bg-gradient-to-br  from-green-400 to-green-700 p-6 ml-10 mr-0 mt-40 rounded-lg shadow-2xl mx-6 font-Inter  w-[100%]"
+              className="card bg-gradient-to-br  from-green-400 to-green-700 p-6 ml-8 mr-0 mt-40 rounded-lg shadow-2xl mx-6 font-Inter  w-[100%]"
               style={{ height: "fit-content", position: "sticky", top: "20px" }}
             >
               <span className="text-white font-bold  text-lg">
-                Explora el Lote Amarillo
+                Tu Espacio de Calidad y Libertad
               </span>
-              <p className="text-white mt-3">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+              <p className="text-white mt-3 text-justify">
+                Sumérgete en la serenidad de "Sol de Maconacona", donde cada
+                rincón es más que un simple espacio, es la promesa de momentos
+                familiares inolvidables. Este enclave excepcional no solo ofrece
+                la libertad de diseñar tu hogar ideal, sino también la
+                oportunidad de compartir momentos de calidad bajo el cálido sol.
+                Imagina risas en el jardín, cenas al aire libre y memorias que
+                perdurarán para siempre.
               </p>
+              <img src="./quality-time.svg" alt="" />
             </div>
             <div className="mx-auto">
               {areasData.map((area) => {
