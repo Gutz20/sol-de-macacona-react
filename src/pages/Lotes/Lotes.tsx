@@ -31,12 +31,54 @@ const Lotes = () => {
           </p>
         </div>
         <p className="">Revisa el estado de cada lote dando click*</p>
-        <img
-          src="./planos-with-lines.png"
-          alt="Plano"
-          useMap="#mapa-imagen"
-          className="mx-auto my-12 max-sm:my-10 max-sm:mx-9"
-        />
+
+        <div className="relative">
+          <img
+            src="./planos-with-lines.png"
+            alt="Plano"
+            useMap="#mapa-imagen"
+            className="mx-auto my-12 max-sm:my-10 max-sm:mx-9"
+          />
+
+          <div className="mx-auto">
+            {areasData.map((area) => {
+              const areaInfo = informationLotes.find(
+                (info) => info.name === area.id
+              );
+              const statusText = areaInfo ? areaInfo.state : "Desconocido";
+              const colorStatusText =
+                areaInfo?.state === "Libre"
+                  ? "green"
+                  : areaInfo?.state === "Separado"
+                  ? "yellow"
+                  : areaInfo?.state === "Vendido"
+                  ? "red"
+                  : "black";
+
+              const coordsArray = area.coords
+                .split(",")
+                .map((coord) => parseInt(coord));
+              const top =
+                Math.min(...coordsArray.filter((_, index) => index % 2 === 1)) +
+                25;
+              const left = Math.min(
+                ...coordsArray.filter((_, index) => index % 2 === 0)
+              );
+
+              return (
+                <div
+                  key={area.id}
+                  className={`absolute text-center max-sm:w-[200px] sm:w-[1200px]`}
+                  style={{ top: `${top}px`, left: `${left}px` }}
+                >
+                  <p
+                    className={`text-${colorStatusText}-500 font-bold`}
+                  >{`${statusText}`}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
 
         <map name="mapa-imagen">
           {areasData.map((area) => (

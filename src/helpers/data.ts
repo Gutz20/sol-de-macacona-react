@@ -334,7 +334,7 @@ export const informationLotes = [
   },
   {
     name: "Area 35",
-    state: "Vendido ",
+    state: "Vendido",
     area: 640,
     adjacentAreas: ["Area 34", "Area 35", "Area 36"],
   },
@@ -411,6 +411,8 @@ export const areasData = [
     id: "Area 46",
     coords: "232,1642,356,1641,357,1810,232,1770",
     shape: "poly",
+    top: 200,
+    left: 150,
   },
   { id: "Area 45", coords: "231,1571,356,1639", shape: "rect" },
   { id: "Area 44", coords: "230,1506,357,1570", shape: "rect" },

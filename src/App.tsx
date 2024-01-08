@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import { Layout } from "./components/Layout";
 import NotFound from "./components/NotFound/NotFound";
@@ -12,42 +12,44 @@ import {
 import { Lotes } from "./pages/Lotes";
 
 function App() {
+  
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      errorElement: <NotFound />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "/about",
+          element: <About />,
+        },
+        {
+          path: "/ubication",
+          element: <Ubication />,
+        },
+        {
+          path: "/proyects",
+          element: <ProjectsForSale />,
+        },
+        {
+          path: "/lotes",
+          element: <Lotes />,
+        },
+        {
+          path: "/descargar-excel",
+          element: <DownloadExcel />,
+        },
+      ],
+    },
+  ]);
+
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={<Layout />}
-            errorElement={<NotFound />}
-          >
-            <Route
-              index={true}
-              element={<Home />}
-            />
-            <Route
-              path="/about"
-              element={<About />}
-            />
-            <Route
-              path="/proyects"
-              element={<ProjectsForSale />}
-            />
-            <Route
-              path="/ubication"
-              element={<Ubication />}
-            />
-            <Route
-              path="/lotes"
-              element={<Lotes />}
-            />
-            <Route
-              path="/descargar-excel"
-              element={<DownloadExcel />}
-            />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </>
   );
 }
