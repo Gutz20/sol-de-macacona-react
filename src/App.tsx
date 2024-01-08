@@ -10,9 +10,17 @@ import {
   Ubication,
 } from "./pages";
 import { Lotes } from "./pages/Lotes";
+import { ProtectedRoute } from "./components";
+import { AdminLayout } from "./components/AdminLayout";
+import { useAuthStore } from "./store";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Forms } from "./pages/admin";
+import { Login } from "./pages/auth";
 
 function App() {
-  
+  const isAuth = useAuthStore((state) => state.isAuth);
+  const queryClient = new QueryClient();
+
   const router = createBrowserRouter([
     {
       path: "/",
@@ -45,11 +53,32 @@ function App() {
         },
       ],
     },
+    {
+      path: "/login-admin",
+      element: <Login />,
+    },
+    {
+      path: "/dashboard",
+      element: (
+        <ProtectedRoute isAllowed={isAuth}>
+          <AdminLayout />
+        </ProtectedRoute>
+      ),
+      errorElement: <NotFound />,
+      children: [
+        {
+          index: true,
+          element: <Forms />,
+        },
+      ],
+    },
   ]);
 
   return (
     <>
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
     </>
   );
 }
