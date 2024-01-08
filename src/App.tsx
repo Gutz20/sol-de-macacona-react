@@ -16,6 +16,7 @@ import { useAuthStore } from "./store";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Forms } from "./pages/admin";
 import { Login } from "./pages/auth";
+import LotesAdmin from "./pages/admin/Lotes/LotesAdmin";
 
 function App() {
   const isAuth = useAuthStore((state) => state.isAuth);
@@ -69,6 +70,10 @@ function App() {
         {
           index: true,
           element: <Forms />,
+        },
+        {
+          path: "/dashboard/lotes",
+          element: <LotesAdmin />,
         },
       ],
     },

@@ -2,13 +2,13 @@ import { FormSchemaLogin } from "@/types/FormLogin";
 import axios from "./axios";
 
 export const loginRequest = async (user: FormSchemaLogin) =>
-  await axios.post(`/api/v1/auth`, user);
+  await axios.post(`/auth/login`, user);
 
 export const getCurrentUserRequest = async () =>
-  await axios.get(`/api/v1/users/userInfo`);
+  await axios.get(`/auth/profile`);
 
 export const registerRequest = (user: any) =>
-  axios.post(`/api/v1/users/create`, user);
+  axios.post(`/auth/register`, user);
 
 export const recoveryPasswordRequest = () =>
-  axios.post(`/api/v1/users/recoveryPassword`);
+  axios.post(`/users/recoveryPassword`);

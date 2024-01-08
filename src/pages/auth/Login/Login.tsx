@@ -9,7 +9,8 @@ import {
   RiEyeFill,
   RiEyeOffFill,
   RiLockFill,
-  RiMailFill,
+  RiMailLine,
+  RiUser2Line,
 } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
 // import "react-toastify/dist/ReactToastify.css";
@@ -59,7 +60,7 @@ const Login = () => {
           className="w-40 h-40 rounded-full shadow-lg shadow-slate-700"
         />
         <h1 className="font-youngSerif text-3xl text-gray-100 tracking-[2px]">
-          Bienvenido a Zzootec System
+          Bienvenido a Sol de Macacona System
         </h1>
         <form
           className="flex flex-col gap-2 w-full"
@@ -67,19 +68,19 @@ const Login = () => {
         >
           <div className="mb-2">
             <div className="relative">
-              <RiMailFill className="absolute top-1/2 -translate-y-1/2 left-2 text-black" />
+              <RiMailLine className="absolute top-1/2 -translate-y-1/2 left-2 text-black" />
               <input
-                id="username"
+                id="email"
                 type="text"
-                placeholder="Nombre de Usuario"
+                placeholder="Email"
                 className="py-3 pl-8 px-4 text-black bg-primaryZzootec1 outline-none rounded-lg w-full"
-                {...register("username")}
+                {...register("email")}
                 autoComplete="off"
               />
             </div>
-            {errors.username && (
+            {errors.email && (
               <p className="text-red-500 text-xs font-semibold">
-                {errors.username.message}
+                {errors.email.message}
               </p>
             )}
           </div>

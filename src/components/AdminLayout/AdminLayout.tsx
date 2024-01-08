@@ -27,7 +27,7 @@ const AdminLayout = () => {
   }, []);
 
   return (
-    <div className="min-h-screen grid grid-cols-1 xl:grid-cols-6 bg-slate-900">
+    <div className="min-h-screen grid grid-cols-1 xl:grid-cols-6 bg-gray-700">
       <Sidebar />
       <div className="xl:col-span-5">
         <HeaderAdmin />

@@ -1,38 +1,35 @@
-import { deleteCorreoRequest, getCorreosRequest } from "@/api/form";
-import { columnsCorreos } from "@/helpers/columnsGrid";
+import { deleteLoteRequest, getLotesRequest } from "@/api/lotes";
+import { columnsLotes } from "@/helpers/columnsGrid";
 import { Button } from "@mui/material";
 import { DataGrid, GridRowId, GridToolbar } from "@mui/x-data-grid";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const Forms = () => {
+const LotesAdmin = () => {
   const queryClient = useQueryClient();
   const navigate = useNavigate();
   const [selectedRowIds, setSelectedRowIds] = useState<GridRowId[]>([]);
-  const { data: correos, isLoading } = useQuery({
-    queryFn: async () => await getCorreosRequest(),
+  const { data: lotes, isLoading } = useQuery({
+    queryFn: async () => await getLotesRequest(),
     queryKey: ["categories"],
   });
 
   const { mutateAsync: deleteCatMutation } = useMutation({
-    mutationFn: deleteCorreoRequest,
+    mutationFn: deleteLoteRequest,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["correos"] });
     },
   });
 
-  const rowsCorreos = correos
-    ? correos?.map((correo) => ({
-        id: correo.id,
-        name: correo.name,
-        email: correo.email,
-        dni: correo.dni,
-        phone: correo.phone,
-        message: correo.message,
-        terms: correo.terms,
-        promotions: correo.promotions,
+  const rowsLotes = lotes
+    ? lotes?.map((lote) => ({
+        id: lote.id,
+        name: lote.name,
+        state: lote.state,
+        area: lote.area,
+        adjacentAreas: lote.adjacentAreas,
       }))
     : [];
 
@@ -79,8 +76,8 @@ const Forms = () => {
 
       <div>
         <DataGrid
-          rows={rowsCorreos}
-          columns={columnsCorreos}
+          rows={rowsLotes}
+          columns={columnsLotes}
           initialState={{
             pagination: {
               paginationModel: {
@@ -106,4 +103,4 @@ const Forms = () => {
   );
 };
 
-export default Forms;
+export default LotesAdmin;

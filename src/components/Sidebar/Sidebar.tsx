@@ -5,7 +5,7 @@ import {
   RiBarChart2Line,
   RiCloseLine,
   RiLogoutCircleRLine,
-  RiMenu3Line
+  RiMenu3Line,
 } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -44,7 +44,15 @@ const Sidebar = () => {
                 to="/dashboard"
                 className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-slate-950 text-white transition-colors"
               >
-                <RiBarChart2Line className="text-green-300" /> Datos de Formulario
+                <RiBarChart2Line className="text-green-300" /> Correos
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/dashboard/lotes"
+                className="flex items-center gap-4 py-2 px-4 rounded-lg hover:bg-slate-950 text-white transition-colors"
+              >
+                <RiBarChart2Line className="text-green-300" /> Lotes
               </Link>
             </li>
           </ul>
