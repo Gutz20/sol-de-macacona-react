@@ -13,13 +13,13 @@ const LotesAdmin = () => {
   const [selectedRowIds, setSelectedRowIds] = useState<GridRowId[]>([]);
   const { data: lotes, isLoading } = useQuery({
     queryFn: async () => await getLotesRequest(),
-    queryKey: ["categories"],
+    queryKey: ["lotes"],
   });
 
   const { mutateAsync: deleteCatMutation } = useMutation({
     mutationFn: deleteLoteRequest,
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["correos"] });
+      queryClient.invalidateQueries({ queryKey: ["lotes"] });
     },
   });
 
@@ -35,7 +35,7 @@ const LotesAdmin = () => {
 
   const handleEditClick = () => {
     if (selectedRowIds !== null) {
-      navigate(`/dashboard/categories/${selectedRowIds[0]}`);
+      navigate(`/dashboard/lotes/${selectedRowIds[0]}`);
     }
   };
 

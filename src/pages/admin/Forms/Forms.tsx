@@ -13,7 +13,7 @@ const Forms = () => {
   const [selectedRowIds, setSelectedRowIds] = useState<GridRowId[]>([]);
   const { data: correos, isLoading } = useQuery({
     queryFn: async () => await getCorreosRequest(),
-    queryKey: ["categories"],
+    queryKey: ["correos"],
   });
 
   const { mutateAsync: deleteCatMutation } = useMutation({
@@ -38,7 +38,7 @@ const Forms = () => {
 
   const handleEditClick = () => {
     if (selectedRowIds !== null) {
-      navigate(`/dashboard/categories/${selectedRowIds[0]}`);
+      navigate(`/dashboard/forms/${selectedRowIds[0]}`);
     }
   };
 

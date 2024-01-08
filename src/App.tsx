@@ -17,6 +17,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Forms } from "./pages/admin";
 import { Login } from "./pages/auth";
 import LotesAdmin from "./pages/admin/Lotes/LotesAdmin";
+import FormsActions from "./pages/admin/Forms/components/FormsActions";
+import LotesActions from "./pages/admin/Lotes/components/LotesActions";
 
 function App() {
   const isAuth = useAuthStore((state) => state.isAuth);
@@ -72,8 +74,24 @@ function App() {
           element: <Forms />,
         },
         {
+          path: "/dashboard/correos/new",
+          element: <FormsActions />,
+        },
+        {
+          path: "/dashboard/correos/:id",
+          element: <FormsActions />,
+        },
+        {
           path: "/dashboard/lotes",
           element: <LotesAdmin />,
+        },
+        {
+          path: "/dashboard/lotes/new",
+          element: <LotesActions />,
+        },
+        {
+          path: "/dashboard/lotes/:id",
+          element: <LotesActions />,
         },
       ],
     },
