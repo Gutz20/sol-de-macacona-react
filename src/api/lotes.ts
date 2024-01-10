@@ -1,3 +1,4 @@
+import { Lote } from "@/models/lote";
 import { axios } from ".";
 
 export const getLotesRequest = async (): Promise<any[]> =>

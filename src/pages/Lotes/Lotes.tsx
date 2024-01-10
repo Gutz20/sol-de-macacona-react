@@ -3,13 +3,20 @@ import { areasData, informationLotes } from "@/helpers";
 import { Area } from "@/types";
 import { useState } from "react";
 import { AreaDialog } from ".";
+import { getLotesRequest } from "@/api/lotes";
+import { useQuery } from "@tanstack/react-query";
 
 const Lotes = () => {
   const [open, setOpen] = useState(false);
   const [selectedArea, setSelectedArea] = useState<Area | null>(null);
 
+  const { data: informationLotes, isLoading } = useQuery({
+    queryFn: async () => await getLotesRequest(),
+    queryKey: ["lotesInformation"],
+  });
+
   const onAreaOpen = (areaName: string) => {
-    const areaInfo = informationLotes.find((area) => area.name === areaName);
+    const areaInfo = informationLotes?.find((area) => area.name === areaName);
     setSelectedArea(areaInfo ?? null);
     setOpen(true);
   };
@@ -77,7 +84,7 @@ const Lotes = () => {
             </div>
             <div className="mx-auto">
               {areasData.map((area) => {
-                const areaInfo = informationLotes.find(
+                const areaInfo = informationLotes?.find(
                   (info) => info.name === area.id
                 );
                 const statusText = areaInfo ? areaInfo.state : "Desconocido";
