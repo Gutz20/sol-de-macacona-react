@@ -75,9 +75,10 @@ const LotesActions = () => {
     try {
       if (params.id) {
         updateLoteRequest(Number(params.id), {
-          id: Number(params.id),
           name: data.name,
           state: data.state,
+          area: data.area,
+          adjacentAreas: data.adjacentAreas,
         });
       } else {
         createLoteRequest({
@@ -123,6 +124,7 @@ const LotesActions = () => {
             <FormControl variant="filled" fullWidth>
               <InputLabel id="state-label">Estado</InputLabel>
               <Select
+                key={"stateKey"}
                 labelId="state-label"
                 value={watch("state") || ""}
                 variant="filled"
@@ -154,7 +156,7 @@ const LotesActions = () => {
                     <RiChatNewLine />
                   </InputAdornment>
                 }
-                {...register("area")}
+                {...register("area", { valueAsNumber: true })}
                 error={errors.area ? true : false}
                 autoComplete="off"
                 autoFocus
@@ -168,6 +170,7 @@ const LotesActions = () => {
           </div>
           <div className="flex flex-col">
             <Controller
+              key={"adjacentArea"}
               control={control}
               name="adjacentAreas"
               rules={{ required: true }}

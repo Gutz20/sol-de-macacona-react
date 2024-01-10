@@ -1,10 +1,9 @@
 import { deleteCorreoRequest, getCorreosRequest } from "@/api/form";
 import { columnsCorreos } from "@/helpers/columnsGrid";
-import { Button } from "@mui/material";
 import { DataGrid, GridRowId, GridToolbar } from "@mui/x-data-grid";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Forms = () => {
@@ -59,7 +58,7 @@ const Forms = () => {
       <div className="flex flex-row justify-between mb-4 ">
         <h2 className="text-4xl font-bold">Correos</h2>
 
-        <div className="flex gap-4">
+        {/* <div className="flex gap-4">
           <Link to="/dashboard/correos/new">
             <Button color="info" variant="contained">
               Nuevo
@@ -74,7 +73,7 @@ const Forms = () => {
           <Button onClick={handleDeleteClick} color="error" variant="contained">
             Eliminar
           </Button>
-        </div>
+        </div> */}
       </div>
 
       <div>
