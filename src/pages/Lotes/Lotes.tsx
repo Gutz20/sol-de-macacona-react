@@ -10,7 +10,7 @@ const Lotes = () => {
   const [open, setOpen] = useState(false);
   const [selectedArea, setSelectedArea] = useState<Area | null>(null);
 
-  const { data: informationLotes, isLoading } = useQuery({
+  const { data: informationLotes } = useQuery({
     queryFn: async () => await getLotesRequest(),
     queryKey: ["lotesInformation"],
   });
