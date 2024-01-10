@@ -57,10 +57,10 @@ const Forms = () => {
   return (
     <div className="bg-white rounded-xl p-4">
       <div className="flex flex-row justify-between mb-4 ">
-        <h2 className="text-4xl font-bold">Categorias</h2>
+        <h2 className="text-4xl font-bold">Correos</h2>
 
         <div className="flex gap-4">
-          <Link to="/dashboard/categories/new">
+          <Link to="/dashboard/correos/new">
             <Button color="info" variant="contained">
               Nuevo
             </Button>

@@ -73,7 +73,7 @@ function App() {
           index: true,
           element: <Forms />,
         },
-        {
+        { 
           path: "/dashboard/correos/new",
           element: <FormsActions />,
         },

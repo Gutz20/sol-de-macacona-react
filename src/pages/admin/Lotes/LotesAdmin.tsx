@@ -54,23 +54,22 @@ const LotesAdmin = () => {
   return (
     <div className="bg-white rounded-xl p-4">
       <div className="flex flex-row justify-between mb-4 ">
-        <h2 className="text-4xl font-bold">Categorias</h2>
-
+        <h2 className="text-4xl font-bold">Lotes</h2>
         <div className="flex gap-4">
-          <Link to="/dashboard/categories/new">
+          {/* <Link to="/dashboard/lotes/new">
             <Button color="info" variant="contained">
               Nuevo
             </Button>
-          </Link>
-          <Button color="success" variant="contained">
+          </Link> */}
+          {/* <Button color="success" variant="contained">
             Guardar
-          </Button>
+          </Button> */}
           <Button onClick={handleEditClick} color="inherit" variant="contained">
             Editar
           </Button>
-          <Button onClick={handleDeleteClick} color="error" variant="contained">
+          {/* <Button onClick={handleDeleteClick} color="error" variant="contained">
             Eliminar
-          </Button>
+          </Button> */}
         </div>
       </div>
 

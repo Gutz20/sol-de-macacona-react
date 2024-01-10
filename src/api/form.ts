@@ -7,5 +7,13 @@ export const addEmailToExcel = (data: FormSchema) =>
 export const getCorreosRequest = async (): Promise<any[]> =>
   (await axios.get(`forms`)).data;
 
-export const deleteCorreoRequest = (id: number) => axios.delete(`forms/${id}`);
+export const getCorreoRequest = async (id: number) =>
+  (await axios.get(`forms/${id}`)).data;
 
+export const createCorreoRequest = async (correo: any) =>
+  await axios.post(`forms`, correo);
+
+export const updateCorreoRequest = async (id: number, correo: any) =>
+  await axios.put(`forms/${id}`, correo);
+
+export const deleteCorreoRequest = (id: number) => axios.delete(`forms/${id}`);

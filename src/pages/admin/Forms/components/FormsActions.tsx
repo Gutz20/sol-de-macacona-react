@@ -1,3 +1,9 @@
+import {
+  createCorreoRequest,
+  getCorreoRequest,
+  updateCorreoRequest,
+} from "@/api/form";
+import { FormSchemaCorreo, formCorreoSchema } from "@/types/SchemaCorreo";
 import { DevTool } from "@hookform/devtools";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
@@ -8,9 +14,16 @@ import {
   InputAdornment,
   InputLabel,
 } from "@mui/material";
-import React, { useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { RiBox2Line } from "react-icons/ri";
+import { useEffect } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import {
+  RiBox2Line,
+  RiMailLine,
+  RiMessage2Line,
+  RiPhoneLine,
+  RiProductHuntLine,
+  RiQuoteText,
+} from "react-icons/ri";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 const FormsActions = () => {
@@ -23,8 +36,8 @@ const FormsActions = () => {
     control,
     setValue,
     reset,
-  } = useForm<FormSchemaCategory>({
-    resolver: zodResolver(formCategorySchema),
+  } = useForm<FormSchemaCorreo>({
+    resolver: zodResolver(formCorreoSchema),
     mode: "onChange",
   });
 
@@ -38,18 +51,18 @@ const FormsActions = () => {
     loadCategory();
   }, [params.id]);
 
-  const onSubmit: SubmitHandler<FormSchemaCategory> = async (data) => {
+  const onSubmit: SubmitHandler<FormSchemaCorreo> = async (data) => {
     try {
       if (params.id) {
         updateCorreoRequest(Number(params.id), {
-          name: data.name,
           id: Number(params.id),
+          name: data.name,
           creationDate: null,
         });
       } else {
         createCorreoRequest({
-          name: data.name,
           id: null,
+          name: data.name,
           creationDate: null,
         });
         reset();
@@ -87,9 +100,145 @@ const FormsActions = () => {
               )}
             </FormHelperText>
           </div>
+          <div className="flex flex-col">
+            <FormControl variant="filled">
+              <InputLabel error={errors.email ? true : false}>Email</InputLabel>
+              <FilledInput
+                startAdornment={
+                  <InputAdornment position="start">
+                    <RiMailLine />
+                  </InputAdornment>
+                }
+                {...register("email")}
+                error={errors.email ? true : false}
+                autoComplete="off"
+                autoFocus
+              />
+            </FormControl>
+            <FormHelperText error={errors.email ? true : false}>
+              {errors.email && (
+                <span className="text-red-500">⚠ {errors.email.message}</span>
+              )}
+            </FormHelperText>
+          </div>
+          <div className="flex flex-col">
+            <FormControl variant="filled">
+              <InputLabel error={errors.dni ? true : false}>DNI</InputLabel>
+              <FilledInput
+                startAdornment={
+                  <InputAdornment position="start">
+                    <RiMailLine />
+                  </InputAdornment>
+                }
+                {...register("dni")}
+                error={errors.dni ? true : false}
+                autoComplete="off"
+                autoFocus
+              />
+            </FormControl>
+            <FormHelperText error={errors.dni ? true : false}>
+              {errors.dni && (
+                <span className="text-red-500">⚠ {errors.dni.message}</span>
+              )}
+            </FormHelperText>
+          </div>
+          <div className="flex flex-col">
+            <FormControl variant="filled">
+              <InputLabel error={errors.phone ? true : false}>
+                Telefono
+              </InputLabel>
+              <FilledInput
+                startAdornment={
+                  <InputAdornment position="start">
+                    <RiPhoneLine />
+                  </InputAdornment>
+                }
+                {...register("phone")}
+                error={errors.phone ? true : false}
+                autoComplete="off"
+                autoFocus
+              />
+            </FormControl>
+            <FormHelperText error={errors.phone ? true : false}>
+              {errors.phone && (
+                <span className="text-red-500">⚠ {errors.phone.message}</span>
+              )}
+            </FormHelperText>
+          </div>
+          <div className="flex flex-col">
+            <FormControl variant="filled">
+              <InputLabel error={errors.message ? true : false}>
+                Mensaje
+              </InputLabel>
+              <FilledInput
+                startAdornment={
+                  <InputAdornment position="start">
+                    <RiMessage2Line />
+                  </InputAdornment>
+                }
+                {...register("message")}
+                error={errors.message ? true : false}
+                autoComplete="off"
+                autoFocus
+              />
+            </FormControl>
+            <FormHelperText error={errors.message ? true : false}>
+              {errors.message && (
+                <span className="text-red-500">⚠ {errors.message.message}</span>
+              )}
+            </FormHelperText>
+          </div>
+          <div className="flex flex-col">
+            <FormControl variant="filled">
+              <InputLabel error={errors.terms ? true : false}>
+                Terminos
+              </InputLabel>
+              <FilledInput
+                startAdornment={
+                  <InputAdornment position="start">
+                    <RiQuoteText />
+                  </InputAdornment>
+                }
+                {...register("terms")}
+                error={errors.terms ? true : false}
+                autoComplete="off"
+                autoFocus
+              />
+            </FormControl>
+            <FormHelperText error={errors.terms ? true : false}>
+              {errors.terms && (
+                <span className="text-red-500">⚠ {errors.terms.message}</span>
+              )}
+            </FormHelperText>
+          </div>
+          <div className="flex flex-col">
+            <FormControl variant="filled">
+              <InputLabel error={errors.promotions ? true : false}>
+                Promociones
+              </InputLabel>
+              <FilledInput
+                startAdornment={
+                  <InputAdornment position="start">
+                    <RiProductHuntLine />
+                  </InputAdornment>
+                }
+                {...register("promotions")}
+                error={errors.promotions ? true : false}
+                autoComplete="off"
+                autoFocus
+              />
+            </FormControl>
+            <FormHelperText error={errors.promotions ? true : false}>
+              {errors.promotions && (
+                <span className="text-red-500">
+                  ⚠ {errors.promotions.message}
+                </span>
+              )}
+            </FormHelperText>
+          </div>
         </div>
         <div className="grid grid-cols-2 gap-4 mt-4">
-          <Link relative="path" to="..">
+          <Link relative="path" to="../..">
             <Button
               variant="outlined"
               color="error"
