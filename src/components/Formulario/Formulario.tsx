@@ -1,4 +1,4 @@
-import { addEmailToExcel } from "@/api/form";
+import { createCorreoRequest } from "@/api/form";
 import { FormSchema, formValidationSchema } from "@/types";
 import { DevTool } from "@hookform/devtools";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -14,7 +14,8 @@ import {
   RadioGroup,
   TextField,
 } from "@mui/material";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { SubmitErrorHandler, SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 
 const Formulario = () => {
   const {
@@ -28,8 +29,19 @@ const Formulario = () => {
   });
 
   const onSubmit: SubmitHandler<FormSchema> = async (data) => {
-    await addEmailToExcel(data);
+    await createCorreoRequest(data);
     reset();
+    toast.success(`El formulario se envio con exito`, {
+      theme: "light",
+      position: "bottom-left",
+    });
+  };
+
+  const onError: SubmitErrorHandler<FormSchema> = async (data) => {
+    toast.error(`Error al enviar el formulario`, {
+      theme: "light",
+      position: "bottom-left",
+    });
   };
 
   return (
@@ -62,7 +74,7 @@ const Formulario = () => {
             datos para que uno de nuestros asesores te contacte.
           </p>
           <form
-            onSubmit={handleSubmit(onSubmit)}
+            onSubmit={handleSubmit(onSubmit, onError)}
             className="grid grid-cols-2 gap-4 mt-10 max-sm:mt-2 max-sm:gap-1 max-sm:text-xs max-sm:flex-col max-sm:grid-cols- max-sm:grid"
           >
             <div className="col-span-1">
@@ -158,11 +170,6 @@ const Formulario = () => {
                     label="Terminos y Condiciones"
                     {...register("terms")}
                   />
-                  {/* {errors.terms && (
-                    <p className="text-red-800 text-sm font-semibold">
-                      {errors.terms.message}
-                    </p>
-                  )} */}
                 </FormGroup>
                 <FormControl>
                   <FormLabel>Deseo recibir promociones</FormLabel>

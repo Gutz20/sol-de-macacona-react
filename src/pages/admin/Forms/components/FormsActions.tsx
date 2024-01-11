@@ -67,6 +67,7 @@ const FormsActions = () => {
         });
         reset();
       }
+      navigate(`/dashboard/lotes`);
     } catch (error) {
       console.error(error);
     }

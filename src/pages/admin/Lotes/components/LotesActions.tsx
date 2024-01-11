@@ -23,7 +23,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { RiBox2Line, RiChatNewLine } from "react-icons/ri";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -38,6 +38,7 @@ const MenuProps = {
 
 const LotesActions = () => {
   const [selectedAreas, setSelectedAreas] = useState<string[]>([]);
+  const navigate = useNavigate();
 
   const { data: lotes } = useQuery({
     queryFn: async () => await getLotesRequest(),
@@ -80,6 +81,7 @@ const LotesActions = () => {
           area: data.area,
           adjacentAreas: data.adjacentAreas,
         });
+        navigate(`/dashboard/lotes`);
       } else {
         createLoteRequest({
           id: null,
@@ -198,8 +200,8 @@ const LotesActions = () => {
                       renderValue={(selected) => selected.join(", ")}
                       MenuProps={MenuProps}
                     >
-                      {lotes?.map((lote) => (
-                        <MenuItem value={lote.name}>
+                      {lotes?.map((lote, i) => (
+                        <MenuItem key={i} value={lote.name}>
                           <Checkbox
                             checked={selectedAreas.includes(`${lote.name}`)}
                           />

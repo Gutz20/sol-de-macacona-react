@@ -56,20 +56,9 @@ const LotesAdmin = () => {
       <div className="flex flex-row justify-between mb-4 ">
         <h2 className="text-4xl font-bold">Lotes</h2>
         <div className="flex gap-4">
-          {/* <Link to="/dashboard/lotes/new">
-            <Button color="info" variant="contained">
-              Nuevo
-            </Button>
-          </Link> */}
-          {/* <Button color="success" variant="contained">
-            Guardar
-          </Button> */}
           <Button onClick={handleEditClick} color="inherit" variant="contained">
             Editar
           </Button>
-          {/* <Button onClick={handleDeleteClick} color="error" variant="contained">
-            Eliminar
-          </Button> */}
         </div>
       </div>
 
