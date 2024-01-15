@@ -41,8 +41,8 @@ const Carrusel = ({ slides }: CarruselProps) => {
           {src.endsWith("mp4") ? (
             <video
               autoPlay
-              muted
-              loop
+              controls
+              controlsList="nodownload noremoteplayback nofullscreen"
               className="mx-auto w-[76%]"
             >
               <source

@@ -93,7 +93,10 @@ const Footer = () => {
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
                   <WhatsAppIcon />{" "}
-                  <a href="https://w.app/SolDeMacacona" target="_blank">
+                  <a
+                    href="https://w.app/SolDeMacacona"
+                    target="_blank"
+                  >
                     Whatsapp
                   </a>
                 </li>
@@ -121,7 +124,10 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
-                  <EmailIcon /> alguncorreo@gmail.com
+                  <EmailIcon />
+                  <a href="contactanos@soldemacacona.com">
+                    contactanos@soldemacacona.com
+                  </a>
                 </li>
                 <li className="text-gray-400 hover:underline hover:cursor-pointer flex items-center gap-2 max-lg:justify-center">
                   <PhoneIcon />

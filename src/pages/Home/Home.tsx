@@ -4,48 +4,43 @@ import { slidesHome } from "@/helpers";
 const Home = () => {
   return (
     <>
-      <div
-        className="bg-cover  w-full h-[100] bg-center relative flex items-center justify-center 
-      max-sm:w-full max-sm:bg-cover  max-sm:h-[250px] max-sm:bg-center max-sm:relative max-sm:flex max-sm:items-center max-sm:justify-center"
-      >
-        <img src="/primera_impresion.jpg" className="w-full"></img>
-        <div
-          className="w-auto mb-60 ml-[60%] text-center bg-white text-orange-950 py-6 px-12 grid opacity-40 absolute text-[170%] font-Itim drop-shadow-2xl
-        max-sm:absolute max-sm:py-5 max-sm:px-5 max-sm:opacity-60 max-sm:font-Itim max-sm:text-xl"
-        >
-          <h2>H.O. Constructores E.I.R.L</h2>
-          <h2>-------------------------------</h2>
-          <h2>Descubre el Placer de vivir</h2>
-          <h2> en el entorno perfecto</h2>
+      <div className="bg-cover w-full h-[100] bg-center relative flex items-center justify-center max-sm:w-full max-sm:bg-cover max-sm:h-[250px] max-sm:bg-center max-sm:relative max-sm:flex max-sm:items-center max-sm:justify-center">
+        <img
+          src="/primera_impresion.jpg"
+          className="w-full h-full object-cover"
+          alt="Primera impresión"
+        />
+        <div className="w-auto mb-4 ml-2 text-center bg-white text-orange-950 py-2 px-4 grid opacity-60 absolute text-[120%] font-Itim drop-shadow-2xl max-sm:absolute max-sm:py-2 max-sm:px-2 max-sm:opacity-50 max-sm:font-Itim max-sm:text-xl right-28 max-sm:right-auto">
+          <h2 className="text-[1.5em] max-sm:text-xs">
+            H.O. Constructores E.I.R.L
+          </h2>
+          <h2 className="text-[1.2em] max-sm:text-xs">
+            -------------------------------
+          </h2>
+          <h2 className="text-[1.5em] max-sm:text-xs">
+            Descubre el Placer de vivir
+          </h2>
+          <h2 className="text-[1.5em] max-sm:text-xs">
+            en el entorno perfecto
+          </h2>
         </div>
       </div>
-      <div className="bg-white py-16 max-sm:py-4">
-        <div
-          className="container mx-auto flex justify-center gap-4 
-                 max-sm:container max-sm:mx-auto  max-sm:flex max-sm:justify-center max-sm:gap-1"
-        >
-          <div
-            className="lg:mx-40 mx-20 flex gap-4 
-          max-sm:flex-col max-sm:gap-4 max-sm:mx-10 max-sm:items-center max-lg:flex-col"
-          >
+
+      <div className="bg-white py-8 max-sm:py-4">
+        <div className="container mx-auto flex justify-center gap-4 max-sm:flex-col">
+          <div className="lg:mx-20 mx-4 flex flex-col gap-4 max-sm:flex-col max-sm:gap-4 max-sm:mx-2 max-sm:items-center max-lg:flex-col">
             <img
-              className="bg-cover h-76 w-50 max-sm:h-[220px] max-sm:w-76 max-lg:h-80"
+              className="bg-cover h-52 w-full max-sm:h-[220px] max-sm:w-full max-lg:h-64"
               src="./family-home-section.svg"
-              alt="familia"
-            ></img>
-            <div className="inline-block">
-              <h1
-                className=" inline-block font-Itim text-4xl w-full text-yellow-600 mb-4
-                  max-sm:text-xl max-sm:mb-2 max-sm:inline-block max-lg:text-3xl"
-              >
+              alt="Familia"
+            />
+            <div className="text-center">
+              <h1 className="font-Itim text-2xl text-yellow-600 mb-2 max-sm:text-xl max-sm:mb-2 max-lg:text-3xl">
                 Explora Innovadores Espacios Residenciales en Ica para Tu Nuevo
                 Hogar Familiar
               </h1>
-              <div className="w-full bg-gray-400 h-[0.5px] my-2"></div>
-              <p
-                className="font-Itim text-xl w-50 text-gray-500
-                max-sm:text-xs max-sm:mb-1 max-sm:inline-block max-sm:mt-2"
-              >
+              <div className="w-16 bg-gray-400 h-[0.5px] my-2 mx-auto"></div>
+              <p className="font-Itim text-sm text-gray-500 max-sm:text-xs max-sm:mb-2">
                 Explora los conjuntos residenciales más vanguardistas en Ica,
                 brindando una variedad excepcional de casas y departamentos en
                 venta para encontrar el lugar perfecto donde tu familia podrá
@@ -55,32 +50,27 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <section className=" bg-neutral-700 py-10">
-        <div className="container  mx-auto">
-          <div className="flex items-center ml-10 justify-center flex-col gap-8">
+
+      <section className="bg-neutral-700 py-8">
+        <div className="container mx-auto">
+          <div className="flex flex-col items-center gap-4">
             <Carrusel slides={slidesHome} />
-            <div className="flex gap-8 justify-center mx-5 max-sm:gap-2 ">
-              <div className="w-[0.50px] bg-white"></div>
-              <div className="text-slate-50 text-center">
-                <div className="max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-5 max-sm:mt-4"></div>
-                <h3 className="text-3xl font-bold max-sm:text-xs max-sm:font-bold">
+            <div className="flex gap-4 justify-center max-sm:flex-col">
+              <div className="w-[0.5px] bg-white max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-3 max-sm:mt-2"></div>
+              <div className="text-slate-50 text-center max-sm:w-full">
+                <h3 className="text-[200%] font-bold max-sm:text-xs max-sm:font-bold">
                   Cada lote ofrece un amplio espacio perfecto para tu familia.
                 </h3>
               </div>
-              <div className="w-[0.50px] bg-white"></div>
-              <div className="text-slate-50 text-center">
-                <div className="max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-5 max-sm:mt-4"></div>
-              </div>
+              <div className="w-[0.5px] bg-white max-sm:w-full max-sm:bg-gray-400 max-sm:h-[0.5px] max-sm:mb-3 max-sm:mt-2"></div>
             </div>
           </div>
         </div>
       </section>
-      <div
-        className="bg-cover bg-atras h-[800px] bg-center relative flex py-10
-                      max-sm:h-[350px]"
-      >
-        <div className="bg-cover bg-Verde-0 w-96 h-48 static max-sm:bg-cover max-sm:w-40 max-sm:h-[5rem] ">
-          <div className="font-Itim text-black my-4 mx-10 text-xl max-sm:my-3 max-sm:mx-2 max-sm:text-xs">
+
+      <div className="bg-cover bg-atras h-[500px] bg-center relative flex py-8 max-sm:h-[350px]">
+        <div className="bg-cover bg-Verde-0 w-64 h-32 static max-sm:w-full max-sm:h-[5rem]">
+          <div className="font-Itim text-black my-2 mx-4 text-sm max-sm:my-1 max-sm:mx-2 max-sm:text-xs">
             <p>
               Cada lote te brinda la libertad de disfrutar de un amplio espacio
               verde para tu familia, y si lo deseas, también podemos incorporar
@@ -89,6 +79,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       <Formulario />
     </>
   );
