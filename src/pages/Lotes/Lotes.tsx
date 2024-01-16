@@ -27,7 +27,7 @@ const Lotes = () => {
 
   return (
     <>
-      <div className="container mx-auto pt-44 max-sm:pt-20">
+      <div className="container mx-auto pt-44 max-sm:pt-20 ">
         <div className="flex flex-col items-center justify-center gap-4 bg-orange-300 bg-opacity-70 max-sm:mx-6 font-Itim">
           <h1 className="text-red-400 text-6xl font-bold text-center my-10 max-sm:text-4xl max-sm:my-1 max-sm:mt-6">
             Lotes Disponibles
@@ -39,10 +39,10 @@ const Lotes = () => {
         </div>
         <p className="ml-6 mb-4">Revisa el estado de cada lote dando click*</p>
 
-        <div>
+        <div className="relative">
           <div className="flex justify-between relative">
-            <div
-              className="card bg-gradient-to-br from-green-300 to-green-600 p-6 ml-0 mr-8 mt-40 rounded-lg shadow-2xl mx-6 font-Inter w-[100%]"
+          <div
+              className="card bg-gradient-to-br from-green-300 to-green-600 p-6 ml-0 mr-8 mt-40 rounded-lg shadow-2xl mx-6 font-Inter w-[100%] max-sm:hidden"
               style={{ height: "fit-content", position: "sticky", top: "20px" }}
             >
               <span className="text-white font-bold text-lg">
@@ -62,10 +62,10 @@ const Lotes = () => {
               src="./planosol.png"
               alt="Plano"
               useMap="#mapa-imagen"
-              className="mx-auto relative my-12 max-sm:my-10 max-sm:mx-9"
+              className="mx-auto relative my-12 max-sm:my-10 max-sm:mx-2 max-sm:h-[3000px] max-sm:w-[430px]"
             />
-            <div
-              className="card bg-gradient-to-br  from-green-400 to-green-700 p-6 ml-8 mr-0 mt-40 rounded-lg shadow-2xl mx-6 font-Inter  w-[100%]"
+             <div
+              className="card bg-gradient-to-br  from-green-400 to-green-700 p-6 ml-8 mr-0 mt-40 rounded-lg shadow-2xl mx-6 font-Inter w-[100%] max-sm:hidden"
               style={{ height: "fit-content", position: "sticky", top: "20px" }}
             >
               <span className="text-white font-bold  text-lg">
@@ -112,7 +112,7 @@ const Lotes = () => {
                 return (
                   <div
                     key={area.id}
-                    className={`absolute text-center max-sm:w-[200px] sm:w-[1200px]`}
+                    className={`absolute text-center max-sm:w-[120px] sm:w-[1200px]`}
                     style={{ top: `${top}px`, left: `${left}px` }}
                   >
                     <p

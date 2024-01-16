@@ -27,7 +27,7 @@ const Footer = () => {
                 </h2>
               </div>
               <div className="flex items-center justify-center">
-                <p className="text-white text-sm font-semibold max-sm:text-xs max-lg:text-lg">
+                <p className="text-white text-sm font-semibold max-sm:text-xs max-lg:text-lg max-sm:p-2">
                   ¡Bienvenidos a Sol de Macacona! Tu socio confiable en la
                   búsqueda del hogar perfecto. Donde cada propiedad es una
                   oportunidad única y cada inversión es un paso hacia un futuro

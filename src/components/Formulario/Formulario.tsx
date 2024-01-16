@@ -61,7 +61,7 @@ const Formulario = () => {
           </h2>
         </div>
         <div className="w-full mt-4 max-sm:mt-2 hover:opacity-100">
-          <div className="w-full bg-white rounded-lg p-4 opacity-0 hover:opacity-70 mt-32">
+          <div className="w-full bg-white rounded-lg p-4 opacity-0 hover:opacity-70 mt-32 max-sm:mt-0">
             <h3 className="text-xl font-bold text-black uppercase">
               Separa tu lote ya!!!
             </h3>
