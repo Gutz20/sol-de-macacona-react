@@ -1,27 +1,26 @@
-import { deleteLoteRequest, getLotesRequest } from "@/api/lotes";
+import { getLotesRequest } from "@/api/lotes";
 import { columnsLotes } from "@/helpers/columnsGrid";
 import { Button } from "@mui/material";
 import { DataGrid, GridRowId, GridToolbar } from "@mui/x-data-grid";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LotesAdmin = () => {
-  const queryClient = useQueryClient();
+  // const queryClient = useQueryClient();
   const navigate = useNavigate();
   const [selectedRowIds, setSelectedRowIds] = useState<GridRowId[]>([]);
-  const { data: lotes, isLoading } = useQuery({
+  const { data: lotes } = useQuery({
     queryFn: async () => await getLotesRequest(),
     queryKey: ["lotes"],
   });
 
-  const { mutateAsync: deleteCatMutation } = useMutation({
-    mutationFn: deleteLoteRequest,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["lotes"] });
-    },
-  });
+  // const { mutateAsync: deleteCatMutation } = useMutation({
+  //   mutationFn: deleteLoteRequest,
+  //   onSuccess: () => {
+  //     queryClient.invalidateQueries({ queryKey: ["lotes"] });
+  //   },
+  // });
 
   const rowsLotes = lotes
     ? lotes?.map((lote) => ({
@@ -39,17 +38,17 @@ const LotesAdmin = () => {
     }
   };
 
-  const handleDeleteClick = () => {
-    if (selectedRowIds !== null) {
-      if (selectedRowIds.length === 1) {
-        deleteCatMutation(selectedRowIds[0] as number);
-        toast("Fila eliminada", {
-          position: "bottom-right",
-          type: "success",
-        });
-      }
-    }
-  };
+  // const handleDeleteClick = () => {
+  //   if (selectedRowIds !== null) {
+  //     if (selectedRowIds.length === 1) {
+  //       deleteCatMutation(selectedRowIds[0] as number);
+  //       toast("Fila eliminada", {
+  //         position: "bottom-right",
+  //         type: "success",
+  //       });
+  //     }
+  //   }
+  // };
 
   return (
     <div className="bg-white rounded-xl p-4">

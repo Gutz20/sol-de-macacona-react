@@ -1,6 +1,4 @@
 import { Formulario } from "@/components";
-import { ourTeam } from "@/helpers";
-import { Avatar } from "@mui/material";
 
 const About = () => {
   return (

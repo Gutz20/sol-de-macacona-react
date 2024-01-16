@@ -1,26 +1,24 @@
-import { deleteCorreoRequest, getCorreosRequest } from "@/api/form";
+import { getCorreosRequest } from "@/api/form";
 import { columnsCorreos } from "@/helpers/columnsGrid";
 import { DataGrid, GridRowId, GridToolbar } from "@mui/x-data-grid";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 
 const Forms = () => {
-  const queryClient = useQueryClient();
-  const navigate = useNavigate();
-  const [selectedRowIds, setSelectedRowIds] = useState<GridRowId[]>([]);
-  const { data: correos, isLoading } = useQuery({
+  // const queryClient = useQueryClient();
+  // const navigate = useNavigate();
+  const [_, setSelectedRowIds] = useState<GridRowId[]>([]);
+  const { data: correos } = useQuery({
     queryFn: async () => await getCorreosRequest(),
     queryKey: ["correos"],
   });
 
-  const { mutateAsync: deleteCatMutation } = useMutation({
-    mutationFn: deleteCorreoRequest,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["correos"] });
-    },
-  });
+  // const { mutateAsync: deleteCatMutation } = useMutation({
+  //   mutationFn: deleteCorreoRequest,
+  //   onSuccess: () => {
+  //     queryClient.invalidateQueries({ queryKey: ["correos"] });
+  //   },
+  // });
 
   const rowsCorreos = correos
     ? correos?.map((correo) => ({
@@ -35,23 +33,23 @@ const Forms = () => {
       }))
     : [];
 
-  const handleEditClick = () => {
-    if (selectedRowIds !== null) {
-      navigate(`/dashboard/forms/${selectedRowIds[0]}`);
-    }
-  };
+  // const handleEditClick = () => {
+  //   if (selectedRowIds !== null) {
+  //     navigate(`/dashboard/forms/${selectedRowIds[0]}`);
+  //   }
+  // };
 
-  const handleDeleteClick = () => {
-    if (selectedRowIds !== null) {
-      if (selectedRowIds.length === 1) {
-        deleteCatMutation(selectedRowIds[0] as number);
-        toast("Fila eliminada", {
-          position: "bottom-right",
-          type: "success",
-        });
-      }
-    }
-  };
+  // const handleDeleteClick = () => {
+  //   if (selectedRowIds !== null) {
+  //     if (selectedRowIds.length === 1) {
+  //       deleteCatMutation(selectedRowIds[0] as number);
+  //       toast("Fila eliminada", {
+  //         position: "bottom-right",
+  //         type: "success",
+  //       });
+  //     }
+  //   }
+  // };
 
   return (
     <div className="bg-white rounded-xl p-4">

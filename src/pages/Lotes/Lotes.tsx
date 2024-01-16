@@ -1,10 +1,10 @@
+import { getLotesRequest } from "@/api/lotes";
 import { Formulario } from "@/components";
-import { areasData, informationLotes } from "@/helpers";
+import { areasData } from "@/helpers";
 import { Area } from "@/types";
+import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { AreaDialog } from ".";
-import { getLotesRequest } from "@/api/lotes";
-import { useQuery } from "@tanstack/react-query";
 
 const Lotes = () => {
   const [open, setOpen] = useState(false);

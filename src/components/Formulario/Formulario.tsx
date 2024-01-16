@@ -37,7 +37,7 @@ const Formulario = () => {
     });
   };
 
-  const onError: SubmitErrorHandler<FormSchema> = async (data) => {
+  const onError: SubmitErrorHandler<FormSchema> = async (_) => {
     toast.error(`Error al enviar el formulario`, {
       theme: "light",
       position: "bottom-left",

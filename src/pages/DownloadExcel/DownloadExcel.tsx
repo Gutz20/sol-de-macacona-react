@@ -1,6 +1,6 @@
 import { getExcelReport } from "@/api";
 import { useEffect } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const DownloadExcel = () => {
   const navigate = useNavigate();

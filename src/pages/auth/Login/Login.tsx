@@ -9,8 +9,7 @@ import {
   RiEyeFill,
   RiEyeOffFill,
   RiLockFill,
-  RiMailLine,
-  RiUser2Line,
+  RiMailLine
 } from "react-icons/ri";
 import { Link, useNavigate } from "react-router-dom";
 // import "react-toastify/dist/ReactToastify.css";
@@ -41,7 +40,7 @@ const Login = () => {
     navigate(`/dashboard`);
   };
 
-  const onError: SubmitErrorHandler<FormSchemaLogin> = async (data) => {
+  const onError: SubmitErrorHandler<FormSchemaLogin> = async (_) => {
     // toast.error(`test ${data.username?.message || data.password?.message}`, {
     //   theme: "light",
     //   position: "top-center",
